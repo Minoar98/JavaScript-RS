@@ -1,0 +1,19 @@
+
+// "BMW" + 14 = "BMW" + "14" = "BMW14"
+// 5 + 10 + "BMW" = "15BMW"
+// 2 + "55" = "255" string concatenation
+// 2 - "55" = -53  normal subtraction
+// 10 - "BMW"  = 10-NaN = NaN
+//"BMW" + 5 + 10 = "BMW" + "5" + 10 = "BMW5" + 10 = "BMW5" +"10" = "BMW510";
+
+var= define, redefine, update - function scope
+let = define, update - block scope
+const = only define - block scope
+x == 1, double equal- check value.
+x === 1, triple equal - check value and type.
+
+2nd {} start to end It will be scope.
+try and catch use for error handling.
+Data type: 
+Number, Boolean, string, array, object, statement.
+
