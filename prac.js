@@ -83,3 +83,11 @@ console.log(message); // Output: work from home!
 
   let value1 = toCelcius();
   console.log(value1);
+
+  function fullName() {
+    const firstName = "King";
+    const lastName = "Khan";
+    console.log(`${firstName} ${lastName}`);
+}
+
+fullName()
