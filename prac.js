@@ -22,7 +22,8 @@
      delete person["last-travel-history"]
      delete person.occupation
      delete person["eyeColor"]
-     person.age = 30;
+     delete person["age"]
+    //  person.age = 30;
 
  console.log(person);
    console.log(person.fullName());
@@ -56,8 +57,8 @@ console.log(messages + "5 days in a week");
 
 
 
-function greatJob(office) {
-    return "work from " + office + "!";
+function greatJob() {
+    return `work form`;
 }
 
 const message = greatJob("home"); // 'home' is passed as the argument
@@ -65,9 +66,14 @@ console.log(message); // Output: work from home!
 
 
 
-(function myFunction(value = "A") {
+(function myFunction() {
     console.log('Hello, World!');
   })()
+
+
+function myFunction() {
+    console.log('Hello, World!');
+  }
 
 
   function toCelcius(f){
@@ -84,10 +90,21 @@ console.log(message); // Output: work from home!
   let value1 = toCelcius();
   console.log(value1);
 
-  function fullName() {
-    const firstName = "King";
-    const lastName = "Khan";
-    console.log(`${firstName} ${lastName}`);
+//   function fullName() {
+//     const firstName = "King";
+//     const lastName = "Khan";
+//     console.log(`${firstName} ${lastName}`);
+// }
+// fullName()
+
+//as a small as possible. do a single work
+function fullName(){
+  console.log("Bangladesh");
 }
 
-fullName()
+// no argument . nothing returned
+
+function fullName1(firstName, lastName){
+  return `${firstName} ${lastName}`;
+}
+fullName1("Akib", "walik");
