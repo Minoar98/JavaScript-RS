@@ -69,3 +69,47 @@ person2 ={age:35};
 
 console.log(footballPlayer);
 console.log(person2);
+
+
+let cricketer = {
+    name: "AB de villers",
+    age: 38,
+    battingStyle:"Right-handed",
+    isPresent: "false",
+}
+let sportsMan = cricketer;
+
+sportsMan.isPresent = "true"
+
+sportsMan = {isPresent:"false"};
+
+console.log(cricketer);
+console.log(sportsMan);
+
+
+let actor = {
+    name: "Amir Khan",
+    age :50,
+    bestMovie:"3 idiots",
+}
+
+let person3 = actor;
+person3.bestMovie = "tare zameen par";
+actor = {bestMovie:"Dhoom3",}
+
+console.log(actor);
+console.log(person3);
+
+
+let actress = {
+    name:"Rashmika Mandarin",
+    age: 27,
+    bestMovie:"Bishma",
+}
+let women = actress;
+
+women.bestMovie = "Pushpa";
+ actress = {bestMovie:"Geeta Govinda"}
+
+ console.log(actress);
+ console.log(women);

@@ -5,7 +5,7 @@ const player = {
     lastTenGoals: [1, 2, 3, 0, 1, 2, 3, 1, 2, 0],
     ballonDior: 8,
     fullName: function(){
-        console.log(`${this.firstName} ${this.lastName}`)
+        // console.log(`${this.firstName} ${this.lastName}`)
         return `${this.firstName} ${this.lastName}`    
     },
     // "goals": 10,
@@ -31,3 +31,4 @@ delete player.isPresent
 
 player.goals = 20;
 console.log(player);
+console.log(player.fullName());

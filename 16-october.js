@@ -29,38 +29,4 @@ console.log(singer.after5yrs())
 //method-name -> after5yrs
 
   
-// function fullName3(firstName, lastName){
-//     console.log(`${firstName} ${lastName}`) ;
-//   }
-//   fullName3("Akib", "walik");
 
-// 2 arguments return something
-function myBestFriend(firstName, lastName){
-    return `${firstName} ${lastName}`
-}
-// const myBestFriend = myBestFriend("walik", "Akib");
-// console.log(myBestFriend);
-
-
-// function myBestFriend(firstName, lastName) {
-//     return `${firstName} ${lastName}`;
-// }
-
-// const bestFriend = myBestFriend("walik", "Akib");
-// console.log(bestFriend);
-
-
-// function myBestFriend(firstName, lastName) {
-//     return `${firstName} ${lastName}`;
-// }
-
-// const bestFriend = myBestFriend();
-// console.log(myBestFriend("walik","Akib"));
-
-
-// function myBestFriend(firstName, lastName) {
-//     return `${firstName} ${lastName}`;
-// }
-
-// const bestFriend = myBestFriend();
-// console.log(myBestFriend("walik", "Akib"));
