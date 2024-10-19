@@ -5,7 +5,7 @@ function fullName(firstName, lastName){
 }
 // console.log(fullName("Tasnia", "Farin"));
 
-// A function takes a name & print 'Greetings x'.
+
 function myName(name){
     // console.log(`Greetings ${name}`);
     console.log("Greetings " +  name)

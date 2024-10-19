@@ -71,22 +71,6 @@ console.log(footballPlayer);
 console.log(person2);
 
 
-let cricketer = {
-    name: "AB de villers",
-    age: 38,
-    battingStyle:"Right-handed",
-    isPresent: "false",
-}
-let sportsMan = cricketer;
-
-sportsMan.isPresent = "true"
-
-sportsMan = {isPresent:"false"};
-
-console.log(cricketer);
-console.log(sportsMan);
-
-
 let actor = {
     name: "Amir Khan",
     age :50,
