@@ -59,10 +59,39 @@ if (isLoggedIn) {
 }
 
 
-let number = 14;
+// let number = 14;
 
-if (number % 3 === 0) {
-    console.log("The number is divisible by 3");
-} else {
-    console.log("The number is not divisible by 3");
+// if (number % 3 === 0) {
+//     console.log("The number is divisible by 3");
+// } else {
+//     console.log("The number is not divisible by 3");
+// }
+
+
+// function printMyName(name = 'ice-cream') {
+
+//     console.log(name);
+// }
+
+// printMyName('adda');
+
+function myCountry(name ="Bangladesh"){
+    console.log(name);
 }
+myCountry("USA")
+
+// primitive & references
+
+let singer = {
+    fullName:"Chester Benington",
+    age : 48,
+    isPresent: false,
+    bestSong: "In the end",
+}
+
+let favSinger = singer;
+favSinger.bestSong =("Bleed it out");
+singer = {bestSong : "Leave out all the rest"};
+
+console.log(favSinger);
+console.log(singer);
