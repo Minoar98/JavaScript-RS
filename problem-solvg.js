@@ -1,9 +1,9 @@
-// const time = new Date().getHours();
+// const time = new Date().getHours(); // buji ni 
 // let greeting;
 // if (time < 30) {
 //   greeting = "Good morning";
 // } else if (time < 20) {
-//   greeting = "Good day";
+//   greeting = "Good day"; 
 // } else {
 //   greeting = "Good evening";
 // }
@@ -95,3 +95,27 @@ singer = {bestSong : "Leave out all the rest"};
 
 console.log(favSinger);
 console.log(singer);
+
+const striker = {
+    firstName: "Karim",
+    lastName: "Benzama",
+    occupation:"Footballer",
+    age: 38,
+    isPresent: true,
+    last10Goals:[2, 0, 1, 3, 1, 0, 2, 1, 0, 3],
+    Goals: 400,
+    totalGoals : function(){
+        return `His carrer ${this.Goals + 20} over goals of his carrer`
+    }     
+}
+delete striker["age"]
+striker.hatrick = 10;
+console.log(striker)
+console.log(striker.totalGoals())
+
+
+//2 parameter return something
+function myHobby(num1, num2){
+   return `${num1} ${num2}` 
+}
+console.log(myHobby("Programmer, Cricketer"))
