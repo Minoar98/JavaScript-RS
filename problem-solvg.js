@@ -20,3 +20,16 @@ if(age < 20){
 } else {
     console.log("You are old")
 }
+
+let num = 4
+
+if(num === 1){
+    console.log("Send money")
+} else if (num === 2) {
+    console.log("Mobile recharge")
+} else if (num === 3){
+    console.log("cash out")
+} else{
+    console.log("log out")
+}
+
