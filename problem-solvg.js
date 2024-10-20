@@ -41,3 +41,19 @@ if(hour < 12 ){
 } else{
     console.log("Good evening")
 }
+
+let temparature = 30;
+
+if(temparature > 0 && temparature < 35){
+    console.log("The temparature is moderate")
+} else {
+    console.log("The temparature is extreme")
+}
+
+let isLoggedIn = false;
+
+if (isLoggedIn) {
+    console.log("Welcome back!");
+} else {
+    console.log("Please log in");
+}
