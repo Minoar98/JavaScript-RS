@@ -119,3 +119,31 @@ function myHobby(num1, num2){
    return `${num1} ${num2}` 
 }
 console.log(myHobby("Programmer, Cricketer"))
+
+// 2 parameter no return
+function barcPlayer (firstName, lastName){
+    console.log(`${firstName} ${lastName}`)
+  
+  }
+  
+  barcPlayer("Lamal","Yamel");
+
+  ////A function takes a negative number & returns after converting same number as a positive number.
+   function negNumber(num){
+    return -(num)
+
+   }
+  console.log (negNumber(-50));
+
+  ////A function takes a positive number & returns after converting same number as a negative number.
+
+function positiveNumber(num){
+   return -(num)
+}
+console.log(positiveNumber(53));
+  //// A function takes a name & print 'Welcome to x'.
+  function newName(name){
+    console.log(`Welcome to ${name}`)
+
+  }
+  newName("Chicago");

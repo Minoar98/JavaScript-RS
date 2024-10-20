@@ -51,14 +51,6 @@ console.log(myBestFriend("walik", "Akib"));
 
 // 2 arguments no retuern
 
-function footBaller (firstName, lastName){
-  console.log(`${firstName} ${lastName}`)
-
-}
-
-footBaller("Lamal","Yamel");
-
-
 //
 function actorMale(firstName, lastName){
     console.log(`${firstName} ${lastName}`)
