@@ -57,3 +57,12 @@ if (isLoggedIn) {
 } else {
     console.log("Please log in");
 }
+
+
+let number = 14;
+
+if (number % 3 === 0) {
+    console.log("The number is divisible by 3");
+} else {
+    console.log("The number is not divisible by 3");
+}
