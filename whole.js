@@ -1,10 +1,8 @@
 //Convert Fahrenheit to Celsius
-
 function toCelcius(fahrenheit){
     return (fahrenheit - 32) * 5/9
 }
 console.log(toCelcius(32));
-
 
 const cricketer = {
     name: "Sachin Tendulkar",
@@ -31,7 +29,6 @@ myFavName("Farin")
 function myBook(num = 5, name ="Arches"){
     console.log(num)
     console.log(name)
-
 }
 myBook(2, "Harry-Potter");
 
@@ -50,15 +47,11 @@ let favcricketer = {
     isPresent: "false",
 }
 let sportsMan = favcricketer;
-
 sportsMan.isPresent = "true"
-
 favcricketer = {isPresent:"false"};
 
 console.log(favcricketer);
 console.log(sportsMan);
-
-
 
 //primative
 
@@ -74,17 +67,13 @@ let obj1 = {
     name: "Tasnia Farin"
 };
 let obj2 = obj1;
-
 obj1.name ="Aymaan Sadia";
-
-
 console.log(obj1.name);
 console.log(obj2.name);
 
 ////A function takes first & last name in a function then return full name
 function fullName(firstName, lastName){
     return `${firstName} ${lastName}`
-
 }
 console.log(fullName("Amir", "Khan"));
 
@@ -99,7 +88,6 @@ myName("Minoar")
 function myNumber(num) {
     return -(num); // 
 }
-
 console.log(myNumber(-10));
 
 //subtract
@@ -112,7 +100,6 @@ console.log(subTract(50, 47));
 function multiPly(a, b){
     return a * b
 }
-
 console.log(multiPly(50, 10));
 
 // divide

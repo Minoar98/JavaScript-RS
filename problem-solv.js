@@ -99,7 +99,7 @@ console.log(singer);
 const striker = {
     firstName: "Karim",
     lastName: "Benzama",
-    occupation:"Footballer",
+    occupation: "Footballer",
     age: 38,
     isPresent: true,
     last10Goals:[2, 0, 1, 3, 1, 0, 2, 1, 0, 3],
@@ -113,7 +113,6 @@ striker.hatrick = 10;
 console.log(striker)
 console.log(striker.totalGoals())
 
-
 //2 parameter return something
 function myHobby(num1, num2){
    return `${num1} ${num2}` 
@@ -123,32 +122,26 @@ console.log(myHobby("Programmer, Cricketer"))
 // 2 parameter no return
 function barcPlayer (firstName, lastName){
     console.log(`${firstName} ${lastName}`)
-  
   }
-  
   barcPlayer("Lamal","Yamel");
 
   ////A function takes a negative number & returns after converting same number as a positive number.
    function negNumber(num){
     return -(num)
-
    }
   console.log (negNumber(-50));
-
   ////A function takes a positive number & returns after converting same number as a negative number.
 
-function positiveNumber(num){
+  function positiveNumber(num){
    return -(num)
 }
 console.log(positiveNumber(53));
   //// A function takes a name & print 'Welcome to x'.
   function newName(name){
     console.log(`Welcome to ${name}`)
-
   }
   newName("Chicago");
 
-  
   function myHobby(num1, num2){
     return `${num1} ${num2}`
   }
