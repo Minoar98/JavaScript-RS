@@ -5,5 +5,4 @@ function maxOfTwo(num1, num2){
         return num2
     }
 }
-
 console.log(maxOfTwo(10, 20));

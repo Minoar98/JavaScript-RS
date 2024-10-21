@@ -2,6 +2,5 @@
 
 function isEven(num){
     return num
-
 }
 isEven(20);
