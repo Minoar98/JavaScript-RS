@@ -5,12 +5,13 @@ const myFunc = () => {
 }
 myFunc();
 
-// A function has a parameter
+// A function has  parameter
 const myFunc1 =(val1, val2) => {
     console.log(val1 + val2);
 }
 myFunc1(10, 20);
 
+//// A function has  parameter (s) default value
 const myFunc3 = (val1, x = 10) =>{
     console.log(val1 + x)
 }
@@ -25,7 +26,6 @@ console.log(myFunc4(10));
 
 // function 1 body line r
 const myFunc5 = () => console.log("My country");
-
 const myFunc6 = (val1, val2) => console.log(val1 + val2);
 const myFunc7 =(val1, x = 10) => console.log(val1 + x);
 const myFunc8 =(val1) => val1
@@ -109,3 +109,18 @@ const myNum3 =(num, x= 10) => {
 }
 console.log(myNum3(10));
 console.log(myNum3(15));
+
+////A function called “increment” takes a number and returns the number incremented by x. (by default x will be 1)
+
+function increment(num, x = 1){
+    return num + x;
+}
+console.log(increment(10))
+console.log(increment(15, 3))
+
+// converted arrow function
+ const increment1 = (num, x = 1) => {
+    return num + x
+ }
+ console.log(increment1(10));
+ console.log(increment1(15, 3));
