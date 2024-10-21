@@ -4,3 +4,10 @@ function division(num1, num2){
    return num1 / num2;
 }
 console.log(division(125, 25));
+
+//convert arrow function
+
+const division1 = (num1, num2) => {
+   return num1/ num2;
+}
+console.log(division1(200, 25));
