@@ -3,3 +3,10 @@
     return (Celsius * 9/5) + 32
  }
  console.log(convertToFahrenheit(80));
+
+ //conver arrow function
+
+ const convertToFahrenheit1 =(Celsius) =>{
+   return (Celsius * 9/5) + 32
+ }
+ console.log(convertToFahrenheit1(160));
