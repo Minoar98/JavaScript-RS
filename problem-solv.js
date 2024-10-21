@@ -149,3 +149,7 @@ console.log(positiveNumber(53));
   newName("Chicago");
 
   
+  function myHobby(num1, num2){
+    return `${num1} ${num2}`
+  }
+  console.log(myHobby("Programer", "Cricketer"));
