@@ -41,6 +41,9 @@ const myFavName1 = (name = "Ricky Pointing") =>{
 }
 myFavName1("Michale clarke");
 
+//convert to 1 line fun
+const myFavName2 =(name1 = "Ricky Pointing") => console.log(name1); myFavName2("Michal Clarke");
+
 // default parameter
 function myFood (name1, name2 ="kalavuna"){
     console.log(name1);
@@ -85,3 +88,61 @@ const myNum2 = (num, x = 10) =>{
 }
 console.log(myNum2(20));
 console.log(myNum2(25));
+
+// function 1 body line r
+const myCountry = () => console.log("My Bangladesh"); myCountry()
+const myFuncAdd = (val1, val2) => console.log(val1 + val2); myFuncAdd(10, 30)
+const myValue1 =(val1, x = 20) => console.log(val1 + x); myValue1(30);
+// const myVal1 =(val3) => val3; myVal1(20);
+
+/// A function that takes miles as input & returns in km.
+ 
+function convertToMiles (num){
+    return (num * 1.6093440);
+}
+console.log(convertToMiles(147));
+  
+// convert as arrow funtion
+const convertToMiles1 = (num1) => {
+    return (num1 *  1.609344 );
+}
+console.log(convertToMiles(247));
+
+//subtract
+function subTract(a, b){
+    return a - b
+}
+console.log(subTract(50, 47));
+
+//converted arrow subtract
+
+const subTract1 = (a, b) => {
+    return a - b
+}
+console.log(100, 95);
+//multiply
+
+function multiPly(a, b){
+    return a * b
+}
+console.log(multiPly(60, 5));
+
+//converted arrow multiply
+
+const multiPly1 =(a, b) => {
+    return a * b
+}
+console.log(multiPly1(50, 40));
+
+// divide arrow function
+
+// function divide(a, b){
+//     return a / b
+// }
+// console.log(divide(65, 5));
+
+const division = (a, b) => {
+    return a / b
+}
+console.log(division(50, 10));
+
