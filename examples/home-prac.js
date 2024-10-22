@@ -28,7 +28,7 @@ console.log(myFunc4(10));
 const myFunc5 = () => console.log("My country"); myFunc5()
 const myFunc6 = (val1, val2) => console.log(val1 + val2); myFunc6(10, 30)
 const myFunc7 =(val1, x = 10) => console.log(val1 + x); myFunc7(20);
-const myFunc8 =(val1) => val1;
+const myFunc8 =(val1) => val1; myFunc8(30);
 
 // 2 parameter no return
 function barcPlayer (firstName, lastName){
