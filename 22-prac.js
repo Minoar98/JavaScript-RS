@@ -84,7 +84,7 @@ console.log(myNum1(15));
 // converted it arrow function
 
 const myNum2 = (num, x = 10) =>{
-    return (num % x===0)
+    return (num % x === 0)
 }
 console.log(myNum2(20));
 console.log(myNum2(25));
@@ -93,7 +93,7 @@ console.log(myNum2(25));
 const myCountry = () => console.log("My Bangladesh"); myCountry()
 const myFuncAdd = (val1, val2) => console.log(val1 + val2); myFuncAdd(10, 30)
 const myValue1 =(val1, x = 20) => console.log(val1 + x); myValue1(30);
-// const myVal1 =(val3) => val3; myVal1(20);
+const myVal1 =(val3) => val3; console.log(myVal1(20));
 
 /// A function that takes miles as input & returns in km.
  
@@ -146,3 +146,32 @@ const division = (a, b) => {
 }
 console.log(division(50, 10));
 
+ // primitive and references
+
+let sportsMan = {
+    name: 'Jack kallis',
+    age: 40
+}
+
+let Cricketer = sportsMan; 
+
+sportsMan.age = 35;
+
+Cricketer = {age : 45}
+
+console.log(Cricketer);
+console.log(sportsMan);
+
+//primitive and references
+let myActor = {
+    name: "Amir Khan",
+    age :52,
+    bestMovie:"Dhoom 3",
+}
+
+let maleActor = myActor;
+maleActor.bestMovie = "tare zameen par";
+myActor = {bestMovie:"3 idiots",}
+
+console.log(myActor);
+console.log(maleActor);

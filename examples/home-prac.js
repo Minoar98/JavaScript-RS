@@ -124,3 +124,5 @@ console.log(increment(15, 3))
  }
  console.log(increment1(10));
  console.log(increment1(15, 3));
+
+ 
