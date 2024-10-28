@@ -21,3 +21,4 @@ const maxOfTwo1 = (num1, num2) =>{
     }
 }
 console.log(maxOfTwo1(10,20));
+
