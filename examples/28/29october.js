@@ -13,7 +13,7 @@
  // alternative
 
  let isEven2;
- if(10 %2){
+ if(10 % 2){
     isEven2 = true;
  }else{
     isEven2 = false;
@@ -33,3 +33,18 @@ function detectingAgeLimit(age){
 detectingAgeLimit(7);
 detectingAgeLimit(15);
 detectingAgeLimit(20);
+
+//
+
+const num = 23;
+num % 2 === 0 ? console.log("Even") : console.log("odd");
+
+console.log(num % 2 === 0 ?'even': 'odd')
+
+const num1 = 100;
+num1 % 2 === 0 ? console.log("Even") :console.log("odd");
+console.log(num1 === 0 ?"even": "odd")
+
+const num2 = 51;
+num2 % 2 === 0 ? console.log("Even") : console.log("Odd");
+console.log(num2 === 0 ? "even": "odd")
