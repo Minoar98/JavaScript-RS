@@ -43,8 +43,17 @@ console.log(num % 2 === 0 ?'even': 'odd')
 
 const num1 = 100;
 num1 % 2 === 0 ? console.log("Even") :console.log("odd");
+
+//alternative
 console.log(num1 === 0 ?"even": "odd")
 
-const num2 = 51;
-num2 % 2 === 0 ? console.log("Even") : console.log("Odd");
+const num2 = 33;  
+33 % 2 === 0 ? console.log("Even") : console.log("Odd");
+
+//alternative
 console.log(num2 === 0 ? "even": "odd")
+
+ //////A function takes a number & returns a boolean if a number is divisible by 22
+
+ const isEven1  = 22 % 2 ? false : true;
+ console.log(isEven1);
