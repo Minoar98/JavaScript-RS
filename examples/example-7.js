@@ -21,3 +21,5 @@ const isEven1 = (num) => {
 }
 console.log(isEven1(10));
  console.log(isEven1(15));
+
+ 
