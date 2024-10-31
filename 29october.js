@@ -48,12 +48,12 @@ num1 % 2 === 0 ? console.log("Even") :console.log("odd");
 console.log(num1 === 0 ?"even": "odd")
 
 const num2 = 33;  
-33 % 2 === 0 ? console.log("Even") : console.log("Odd");
+33 % 2 === 0 ? console.log("Even") : console.log("Odd"); // divisible by 2
 
 //alternative
-console.log(num2 === 0 ? "even": "odd")
+console.log(33 % 2 === 0 ? "even": "odd")
 
- //////A function takes a number & returns a boolean if a number is divisible by 22
+ 
 
- const isEven1  = 22 % 2 ? false : true;
+ const isEven1  = 22 % 2 ? false : true;// returns a boolean //divisible by 22
  console.log(isEven1);
