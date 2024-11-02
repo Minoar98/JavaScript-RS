@@ -1,6 +1,7 @@
-//////A function takes a number & is divisible by 10
+////// is divisible by 10
 
-10 % 2 === 0 ? console.log('even'): console.log("odd");
+const num = 98;
+num % 2 === 0 ? console.log('even'): console.log("odd");
 
 // way:
  console.log(10 % 2 === 0 ? 'even' : 'odd');
@@ -36,7 +37,7 @@ detectingAgeLimit(20);
 
 //
 
-const num = 23;
+const num4 = 23;
 num % 2 === 0 ? console.log("Even") : console.log("odd");
 
 console.log(num % 2 === 0 ?'even': 'odd')
@@ -55,5 +56,15 @@ console.log(33 % 2 === 0 ? "even": "odd")
 
  
 
+//////A function takes a number & is divisible by 10
+
  const isEven1  = 22 % 2 ? false : true;// returns a boolean //divisible by 22
  console.log(isEven1);
+
+
+ const dividedBy10 = (num, x = 10) => {
+    return num % x === 0 ? true : false;
+}
+
+dividedBy10(20); // true
+dividedBy10(15); // false
