@@ -68,3 +68,40 @@ console.log(33 % 2 === 0 ? "even": "odd")
 
 dividedBy10(20); // true
 dividedBy10(15); // false
+
+
+const arr = [1, 2, 3, 4, 5];
+
+let i  = 0;
+while(i <= arr.length - 1){
+    console.log(arr[i]);
+    i++;
+}
+
+const arr1 = [1, 2, 3, 4, 5];
+for (let j = 0 ; j <= arr1.length-1 ; j++){
+    console.log(arr1[j])
+
+}
+
+//Use of 'break' in loop
+
+// If I found break, then stop the loop
+for (let k = 1; k <= 5; k++) {
+    if (k === 3) {
+        break;
+        console.log("The leader: " + k);
+    }
+    console.log(k);
+}
+
+//use of 'continue' in for loop
+
+// If I found then stop executing the next statements but start from the next element as always.
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        console.log("The follower: " + i);
+        continue;
+    }
+    console.log(i);
+}

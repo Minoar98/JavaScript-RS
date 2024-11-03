@@ -30,3 +30,36 @@ const person = {
 console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.age);
+
+//length property
+
+const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits5.length;
+console.log(size);
+
+//Accessing the First Array Element
+const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits6[0];
+console.log(fruit);
+
+////Accessing the last Array Element
+
+const fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+let fruit1 = fruits7[fruits7.length - 1];
+console.log(fruit1);
+
+//Adding Array Elements
+
+const fruits8 = ["Banana", "Orange", "Apple"];
+fruits8.push("Lemon");  // Adds a new element (Lemon) to fruits
+console.log(fruits8);
+
+// array length property
+
+const fruits9 = ["Banana", "Orange", "Apple"];
+fruits9[fruits9.length] = "Lemon";  // Adds "Lemon" to fruits
+console.log(fruits9);
+
+const fruits10 = ["Banana", "Orange", "Apple"];
+fruits10[6] = "Lemon"; 
+console.log(fruits10);
