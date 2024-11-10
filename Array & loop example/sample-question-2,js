@@ -1,0 +1,19 @@
+//2. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print only positive numbers.
+
+let array = [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39];
+let positiveNumber = 0;
+
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] > positiveNumber) {
+    console.log(positiveNumber);
+  }
+}
+
+let j = 0;
+while(j < array.length){
+    if(array[j] > positiveNumber){
+        console.log(positiveNumber)
+    }
+    j++;
+}

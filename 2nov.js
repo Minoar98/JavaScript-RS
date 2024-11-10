@@ -20,7 +20,6 @@ while(j <=50){
         if(j % 2 === 1){
             console.log(j)
         }
-        // console.log(j);
     }
     j++;
 }

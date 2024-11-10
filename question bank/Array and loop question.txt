@@ -1,0 +1,10 @@
+1. arr = [1, 2, 3, 4, 5], print all the odd numbers using for & while loops
+2. arr = [1, 2, 3, 4, 5], print all the even numbers using for & while loops
+3. arr = [1, 2, 3, 4, 5], print all the even numbers using for & while loops (must apply 'continue')
+4. arr = [1, 2, 3, 4, 5], print all the even numbers using for & while loops (must apply 'continue')
+5. arr = [10, 20, 5, 30, 40] print all the elements of an array but stop if you find out small element than previous element. (tricky but try to solve of your own using 'break' & use both for & while loop)
+
+6. [4, 2, 7, 8, 9] is the array. find the sum of that array using for & while loop.
+7. [6, 3, 9, 2, 3] is the array. find the average of that array using for & while loop.
+8. [42, 26, 74, 80, 49] is the array. find the maximum value of that array using for & while loop.
+9. [22, 76, 54, 40, 99] is the array. find the minimum value of that array using for & while loop.

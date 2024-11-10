@@ -1,0 +1,7 @@
+1. A function called "maxOfTwo" takes two numbers as parameters and returns the largest of the two.
+2. A function called "minOfTwo" takes two numbers as parameters and returns the smallest of the two.
+3. A function called "convertToFahrenheit" takes a temperature in Celsius as a parameter and returns the temperature in Fahrenheit.
+4. A function called "multiply" takes in two parameters and returns the product of the two numbers.
+5. A function called "division" takes in two parameters and returns the division of the two numbers.
+6. A function called "division" takes a parameter and returns the division by 5. (use default parameter).
+7. A function called "isEven" takes in a number as a parameter and returns true if the number is even, and false if the number is odd.
