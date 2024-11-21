@@ -16,7 +16,6 @@ let i = 0;
 while(i < arr.length){
     if(arr[i] % 2 === 1){
         continue; 
-       
     }
     console.log(arr[i]);
     i++;

@@ -5,15 +5,15 @@ let positiveNumber = 0;
 
 
 for (let i = 0; i < array.length; i++) {
-  if (array[i] > positiveNumber) {
-    console.log(positiveNumber);
+  if (array[i] > 0) {
+    console.log(array[i]);
   }
 }
 
 let j = 0;
 while(j < array.length){
-    if(array[j] > positiveNumber){
-        console.log(positiveNumber)
+    if(array[j] >0){
+        console.log(array[j])
     }
     j++;
 }
