@@ -1,6 +1,6 @@
 // [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the maximum number of odd indexed numbers
 
-const findMaxOddIndexNumber = (array) => {
+const maxOddIndexNumber = (array) => {
     let max = -Infinity;
     for(let i = 1; i < array.length; i+=2) {
         if(array [i] > max) {
@@ -12,4 +12,4 @@ const findMaxOddIndexNumber = (array) => {
 }
 
 const array = [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39];
-findMaxOddIndexNumber(array);
+maxOddIndexNumber(array);

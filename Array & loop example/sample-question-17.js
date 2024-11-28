@@ -1,0 +1,1 @@
+// 1. [1, 2, 3, 4, 5, 6, 6, 6, 8, 9] is an array. Print the lower bound of 4 (first meet position from left) (using both linear & binary search)
