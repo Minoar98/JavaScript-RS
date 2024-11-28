@@ -12,4 +12,4 @@ const findMinOddIndexNumber = () => {
 }
 
 const array = [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39]
-findMinEvenIndexNumber(array)
+findMinOddIndexNumber(array)
