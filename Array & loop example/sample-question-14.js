@@ -4,7 +4,7 @@ const minEvenIndexNumber = () => {
     let min = 1000;
     for(let i = 0; i < array.length; i+= 2) {
         if(array[i] < min) {
-             // console.log(array[i] + ' ' + i);
+            //  console.log(array[i] + ' ' + i);
             min = array [i];
         }
     }

@@ -107,3 +107,17 @@ const cars = [
     { type: 'BMW', year: 2010 },
   ];
   console.log(cars1.filter((value) => value.year > 2005))
+
+
+  const forEach3 = cb => {
+    const arr = [10, 20, 30];
+    for (let i = 0; i < arr.length; i++) {
+      cb(arr[i], i, arr);
+    }
+  };
+  
+  const print3 = (value, index, array) => {
+    console.log(value, index, array);
+  };
+  
+  forEach2(print);
