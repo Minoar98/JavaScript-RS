@@ -9,7 +9,7 @@ const avgOfEvenIndexedNumbers =(array) => {
         count++; 
     }
 
-    let average = sum / array[i]; 
+    let average = sum / count; 
     console.log("The average of even-indexed  is:", average);
 }
 
