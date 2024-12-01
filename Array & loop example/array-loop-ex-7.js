@@ -13,7 +13,6 @@ const findSumAvg = (arr) => {
             min = arr[i];
         }
     }
-
     const sum = max + min;
     const avg = (max + min) / 2;
 
