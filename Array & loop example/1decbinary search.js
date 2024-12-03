@@ -7,7 +7,7 @@ const binarySearch = (arr, target) => {
         if(arr[mid] === target) {
             return mid;
         }
-        if(arr[mid < target]) {
+        if(arr[mid] < target) {
             start = mid + 1;
         } else {
             end = mid -1
