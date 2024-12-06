@@ -21,7 +21,7 @@ const binarySearch =(array,target) => {
 }
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-let target = 6;
+let target = 7;
 let result = binarySearch(array, target)
 
 if (result === -1) {

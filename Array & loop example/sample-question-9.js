@@ -3,7 +3,7 @@
 const sumOfNumbers = (array) => {
     let sum = 0;
     for(let i = 0; i < array.length; i++){
-        if(array[i] > 10){
+        if(array[i] < 10){
             sum += array[i]
             console.log(sum)
         }
