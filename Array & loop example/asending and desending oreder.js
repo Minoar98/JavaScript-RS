@@ -1,6 +1,14 @@
-// ["Mango", "Orange", "Kiwi", "kiwi", "Orange", "Mango"], 
+// ["Mango", "Orange", "Kiwi", "kiwi", "orange", "mango"], 
 // Sort ascending & descending order
 
-const fruits =  ["Mango", "Orange", "Kiwi", "kiwi", "Orange", "Mango"];
-fruits.sort()
-console.log(fruits);
+
+// asending order
+const fruits =  ["Mango", "Orange", "Kiwi", "kiwi", "orange", "mango"];
+const myFruits = fruits.sort();
+console.log(myFruits);
+
+// desending order
+
+const fruits1 = ["Mango", "Orange", "Kiwi", "kiwi", "orange", "mango"];
+const myfruits1 = fruits1.reverse()
+console.log(myfruits1);
