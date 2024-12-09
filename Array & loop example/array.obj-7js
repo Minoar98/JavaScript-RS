@@ -10,7 +10,7 @@ function reducer(prev, curr) {
 }
 
 function reducer2 (prev, curr) {
-    return curr < 1 ? prev + curr : prev;
+    return curr < 0 ? prev + curr : prev;
 }
 
 function findSumOfNegNum(arr) {

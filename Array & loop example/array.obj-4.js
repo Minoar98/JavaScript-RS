@@ -1,7 +1,7 @@
 // [42, 26, 74, 80, 49] is the array. find the maximum value
 function findMaxValue(arr) {
     let max = -Infinity;
-    arr.forEach(value => {
+    const maxValue = arr.forEach(value => {
       if (value > max) {
         max = value;
       }

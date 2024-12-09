@@ -1,4 +1,4 @@
-// [6, 3, 9, 2, 3] is the array. find the average of that array using map
+// [6, 3, 9, 2, 3] is the array. find the average of that array.
 
 function findAverage(arr) {
     const sum = arr.reduce((previousValue, presentValue)=> previousValue + presentValue);

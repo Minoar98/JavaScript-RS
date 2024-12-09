@@ -4,15 +4,14 @@
 function reducers(prev, curr) {
     if(curr > 10) {
         return prev + curr
-    } else
-    return prev
-
+    } else {
+       return prev 
+    }
 }
 
 function sumOfNumbers (arr) {
     const printSumOfNumbers = arr.reduce(reducers, 0)
     return printSumOfNumbers;
-
 }
 
 
