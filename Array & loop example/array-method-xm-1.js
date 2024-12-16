@@ -25,3 +25,4 @@ const arr = [10, 15, 20, 22, 45, 56, 3, 7, 12];
 const StartIndex = 2; EndIndex = 6;
 const result = printSumAvg(arr);
 console.log(result);
+
