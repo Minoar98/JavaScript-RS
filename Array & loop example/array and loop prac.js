@@ -156,3 +156,11 @@ console.log(fruit);
 const months = ["Jan", "Feb", "Mar", "Apr"];
 const sorted = months.toSorted();
 console.log(sorted)
+
+
+const points = [40, 100, 1, 5, 25, 10];
+const result = points.sort(function (a, b) {
+  return a - b;
+});
+
+console.log(result)

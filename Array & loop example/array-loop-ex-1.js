@@ -1,10 +1,10 @@
 // 1. [-11, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Count odd numbers.
 
-const countOddNumber = (array) => {
+const countOddNumber = (arr) => {
     let count = 0;
-    for (let i = 0; i < array.length; i++) { 
-        if(array[i] % 2 ===1) {
-            // console.log(array[i])
+    for (let i = 0; i < arr.length; i++) { 
+        if(arr[i] % 2 ===1) {
+            // console.log(arr[i])
             count++;
         }
     }
