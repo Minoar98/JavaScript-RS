@@ -3,19 +3,13 @@
 3. arr = [1, 2, 3, 4, 5], print all the even numbers using for & while loops (must apply 'continue')
 4. arr = [1, 2, 3, 4, 5], print all the even numbers using for & while loops (must apply 'continue')
 5. arr = [10, 20, 5, 30, 40] print all the elements of an array but stop if you find out small element than previous element. (tricky but try to solve of your own using 'break' & use both for & while loop)
-
 6. [4, 2, 7, 8, 9] is the array. find the sum of that array using for & while loop.
 7. [6, 3, 9, 2, 3] is the array. find the average of that array using for & while loop.
 8. [42, 26, 74, 80, 49] is the array. find the maximum value of that array using for & while loop.
 9. [22, 76, 54, 40, 99] is the array. find the minimum value of that array using for & while loop.
-
 10. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the sum of positive numbers.
 11. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the sum of negative numbers.
 12. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the sum of numbers from index = 2 to index = 6.
-// [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39,  -16, 204, -43, 32, 75, 80, 42, 33, -91, 33]
-// [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39,  -16, 204, -43, 32, 75, 80, 42, 33, -91, 33] is an array.
-//  Print the sum of odd indexed numbers but must start from index 4 & end till 12.
-
 13. [-10, 20, -44, 35, 65, 40, 22, -33, 51, 9] is an array. Print the sum of numbers which are greater than 10.
 14. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the sum of even indexed numbers.
 15. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the maximum number of even indexed numbers.
@@ -29,8 +23,6 @@
 23.[-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print the sum of odd indexed numbers.
 24. [1, 2, 3, 4, 5, 6, 6, 6, 8, 9] is an array. Print the lower bound of 4 (first meet position from left) (using both linear & binary search)
 25. [1, 2, 3, 4, 5, 6, 6, 6, 8, 9] is an array. Print the upper bound of 4 (first meet position from right) (using both linear & binary search)
-
-
 26. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Count odd numbers.
 27. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Count even numbers.
 28. [-10, 20, -44, 35, 65, 40, 22, -33, 51, -39] is an array. Print every elements of an array after adding 5 of each elements.
@@ -39,6 +31,57 @@
 31. [-10, 20, -44, 35, 65] is an array. Find 20 in that array. If not found then print '20 is not found' message.
 32. [-20, 50, -34, 55, 95] is an array. Find the difference between maximum & minimum number. (use function & loop)
 33. [-20, 50, -34, 55, 95] is an array. Find the sum & avg of maximum & minimum number. (use function & loop)
+34. // [-10, 20, -44, 33, 51, 40, 20, -33, 51, -39] is an array. Print which value exist twice.
+35.[-10, 20, -44, 35, 65, 40, 22, -33, 51, -39,  -16, 204, -43, 32, 75, 80, 42, 33, -91, 33] is an array. Print the sum of odd indexed numbers but must start from index 4 & end till 12.
+36.// [-1, 2, -3, 4, -5, 0] prepare another array which contents only negative numbers
+
+37.// [10, 15, 20, 22, 45, 56, 3, 7, 12]
+// don't consider, from StartIndex = 2 to EndIndex = 6.
+
+// 1. Sum
+// 2. Avg
+
+38// [-1, 2, -3, 4, -5, 0]
+// Toggle all the elements & return the new array.
+
+// [1, -2, 3, -4, 5, 0]
+
+39// [-1, 2, -3, 4, -5]
+// Convert positive numbers if you find negative numbers & prepare the new array.
+
+
+
+Array
+[
+  {
+    id: 1,
+    title: 'Product 1',
+    price: 19.99,
+    imageUrl: 'image1.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }, 
+  {
+    id: 2,
+    title: 'Product 2',
+    price: 14.99,
+    imageUrl: 'image2.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }, 
+  {
+    id: 3,
+    title: 'Product 3',
+    price: 24.99,
+    imageUrl: 'image3.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }
+]
+
+Sample Questions:
+1. Use the map method to create an array containing only the title of each product.
+2. Use map to create an array of formatted price strings. Output: ['$19.99', '$14.99', '$24.99']
+3. Use map to create a new array of objects where each product has a 'discountedPrice' property (10% off the original price).
+4. Use map to create a new array of objects where each product has a 'discountedPrice' property (10% off the original price + 5% vat), also track the extra property named 'discount' & 'vat' with it's own value.
+5. Use map to create a new array of objects if after adding & calculting 'discountedPrice' property (10% off the original price), for below $15 (discountedPrice), add '(cheap)' tag in that specific product title.
 
 
 

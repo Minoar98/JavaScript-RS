@@ -2,8 +2,8 @@
 
 function findDiffBetwnnMaxMin(arr) {
   let max = -Infinity;
-  let min = Infinity
-  const maxValue = arr.forEach((value) => {
+  let min = Infinity;
+  arr.forEach((value) => {
     if (value > max) {
       max = value;
     }
@@ -15,8 +15,6 @@ function findDiffBetwnnMaxMin(arr) {
   return max - min;
 }
 
-const arr = [-20, 50, -34, 55, 95]; 
+const arr = [-20, 50, -34, 55, 95];
 const result = findDiffBetwnnMaxMin(arr);
 console.log(result);
-
-
