@@ -1,6 +1,4 @@
-// 3. Use map to create a new array of objects where each product has a
-//  'discountedPrice' property
-// (10% off the original price).
+// 1. Use the map method to create an array containing only the title of each product.
 
 const array = [
   {
@@ -26,11 +24,10 @@ const array = [
   },
 ];
 
-function discountedPrice(value) {
-  return {
-    discountedPrice: value.price - value.price * 0.1,
-  };
-}
-
-const result = array.map(discountedPrice);
-console.log(result);
+const { title } = array[0];
+const { title: title1 } = array[1];
+const { title: title2 } = array[2];
+console.log(title);
+console.log(title1);
+console.log(title2);
+// console.log(product.price); // With Proper Name

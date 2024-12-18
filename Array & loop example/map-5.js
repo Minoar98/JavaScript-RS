@@ -26,11 +26,13 @@ const array = [
   },
 ];
 
-function discountedPrice(value) {
+function discountedPriceFunc(value) {
+  const discountedPrice = value.price - value.price * 0.1;
   return {
-    discountedPrice: value.price - value.price * 0.1,
+    ...value, // copy
+    discountedPrice, // add
   };
 }
 
-const result = array.map(discountedPrice);
+const result = array.map(discountedPriceFunc);
 console.log(result);

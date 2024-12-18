@@ -1,6 +1,5 @@
-// 3. Use map to create a new array of objects where each product has a
-//  'discountedPrice' property
-// (10% off the original price).
+// Use map to create an array of formatted price strings.
+// Output: ['$19.99', '$14.99', '$24.99']
 
 const array = [
   {
@@ -26,11 +25,15 @@ const array = [
   },
 ];
 
-function discountedPrice(value) {
-  return {
-    discountedPrice: value.price - value.price * 0.1,
-  };
-}
+/// object destructive
 
-const result = array.map(discountedPrice);
-console.log(result);
+const { imageUrl: img } = array[0]; // Alias (Rename)
+const { imageUrl: img1 } = array[1]; // Alias (Rename)
+const { imageUrl: img2 } = array[2];
+console.log(img);
+console.log(img1);
+console.log(img2);
+
+console.log(`$${array[0].price}`);
+console.log(`$${array[1].price}`);
+console.log(`$${array[2].price}`)
