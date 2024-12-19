@@ -13,14 +13,13 @@ const arr = [
   },
 ];
 
-
 function func(value) {
-    const fatherName = "David"
- 
+  const fatherName = "David";
+
   return {
     ...value, // Copy
     fatherName, // add
-    age: `${value.age + 5} `, // update
+    age: value.age + 5, // update
   };
 }
 

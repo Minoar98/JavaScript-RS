@@ -17,3 +17,27 @@ try and catch use for error handling.
 Data type: 
 Number, Boolean, string, array, object, statement.
 
+// falsy value - 6
+// 0, false, null, undefined, NaN, ''
+
+// 1. Traverse korbe
+// 2. Find the value
+// 3. If found -> return that value, if not found 'undefined'
+// 4. Use condition after 'return' keyword in callback function
+
+const arr = [10, 20, 30, 40, 50];
+
+function func(value) {
+  // console.log(value, index, array);
+  return value === 35;
+}
+
+const arrValue = arr.find(func);
+if (arrValue) {
+  console.log('Found.')
+} else {
+  console.log('Not Found.')
+}
+
+console.log(arrValue ? 'Found' : 'Not Found'
+

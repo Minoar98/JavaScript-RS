@@ -1,5 +1,5 @@
-// 1. Create an array of just the 'name' property from the users
-// Output: ['Alice', 'Bob', 'Charlie']
+// 4. Create an array of hobby counts for each user (i.e., the number of hobbies each user has).
+// Output: [2, 2, 2]
 
 const users = [
   {
@@ -25,11 +25,14 @@ const users = [
   },
 ];
 
-// const usersName = users.map((user) => user.name);
-
-function usersName(user) {
-  return user.name;
+function hobbyCount(user) {
+  return user.hobbies.length;
 }
 
-const result = users.map(usersName);
+const result = users.map(hobbyCount);
 console.log(result);
+
+// Es6
+
+const hobbyCounts = users.map((user) => user.hobbies.length);
+console.log(hobbyCounts)

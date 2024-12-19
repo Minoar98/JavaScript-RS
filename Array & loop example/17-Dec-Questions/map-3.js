@@ -6,7 +6,7 @@
 //    { id: 3, name: 'Charlie', fullName: 'Charlie Smith', ... }
 // ]
 
-Array: users = [
+const users = [
   {
     id: 1,
     name: "Alice",
@@ -31,10 +31,9 @@ Array: users = [
 ];
 
 function usersNameAge(value) {
-  const fullName = `${value.name} smith`;
   return {
     ...value,
-    fullName,
+    fullName: `${value.name} Smith`,
   };
 }
 
