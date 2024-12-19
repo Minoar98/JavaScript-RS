@@ -1,0 +1,135 @@
+
+
+
+
+Array
+[
+  {
+    id: 1,
+    title: 'Product 1',
+    price: 19.99,
+    imageUrl: 'image1.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }, 
+  {
+    id: 2,
+    title: 'Product 2',
+    price: 14.99,
+    imageUrl: 'image2.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }, 
+  {
+    id: 3,
+    title: 'Product 3',
+    price: 24.99,
+    imageUrl: 'image3.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }
+]
+
+Sample Questions:
+1. Use the map method to create an array containing only the title of each product.
+2. Use map to create an array of formatted price strings. Output: ['$19.99', '$14.99', '$24.99']
+3. Use map to create a new array of objects where each product has a 'discountedPrice' property (10% off the original price).
+4. Use map to create a new array of objects where each product has a 'discountedPrice' property (10% off the original price + 5% vat), also track the extra property named 'discount' & 'vat' with it's own value.
+5. Use map to create a new array of objects if after adding & calculting 'discountedPrice' property (10% off the original price), for below $15 (discountedPrice), add '(cheap)' tag in that specific product title.
+
+
+
+Instructions:
+1. Use Vanilla JS syntax, Use ES6 Syntax both
+2. '...' means add or print non-mentioned properties
+3. Read the question first & observe the output then adjust your code to generate the output.
+4. Prepare the zip named '17-Dec-Questions.zip'
+5. Note all the questions  future references & practices
+6. Try, Try & Try
+7. Best of luck
+
+Array:
+users = [
+  { id: 1, name: 'Alice', age: 25, country: 'USA', hobbies: ['Reading', 'Traveling'] },
+  { id: 2, name: 'Bob', age: 30, country: 'UK', hobbies: ['Cooking', 'Cycling'] },
+  { id: 3, name: 'Charlie', age: 22, country: 'Canada', hobbies: ['Gaming', 'Drawing'] }
+];
+
+Sample Questions:
+1. Create an array of just the 'name' property from the users
+Output: ['Alice', 'Bob', 'Charlie']
+
+2. Generate an array of strings like the following
+Output: ['Alice is 25 years old', 'Bob is 30 years old', 'Charlie is 22 years old']
+
+3. Assume the 'name' property has only first names. Use map to add a 'fullName' property, appending 'Smith' as the last name
+Output:
+[
+   { id: 1, name: 'Alice', fullName: 'Alice Smith', ... },
+   { id: 2, name: 'Bob', fullName: 'Bob Smith', ... },
+   { id: 3, name: 'Charlie', fullName: 'Charlie Smith', ... }
+]
+
+Note: '...' means rest of the properties. If I wrote all then it will take much space. So, denote the rest properties using '...' sig...
+
+
+
+Note: '...' means rest of the properties. If I wrote all then it will take much space. So, denote the rest properties using '...' sign. But you have to attach all the properties.
+
+4. Create an array of hobby counts for each user (i.e., the number of hobbies each user has).
+Output: [2, 2, 2]
+
+5. Create an array of strings summarizing each user's hobbies.
+Output:
+[
+   'Alice enjoys Reading and Traveling.',
+   'Bob enjoys Cooking and Cycling.',
+   'Charlie enjoys Gaming and Drawing.'
+]
+
+6. Create an array of profile URLs for each user based on their 'id' and 'name'
+Output:
+[
+   { id: 1, name: 'Alice', age: 25, isEligible: true, ... },
+   { id: 2, name: 'Bob', age: 30, isEligible: true, ... },
+   { id: 3, name: 'Charlie', age: 22, isEligible: true, ... }
+]
+
+7. Assume users aged 18 and older are eligible for a program. Use map to add an 'isEligible' property based on the 'age'
+Output:
+[
+   { id: 1, name: 'Alice', age: 25, isEligible: true, ... },
+   { id: 2, name: 'Bob', age: 30, isEligible: true, ... },
+   { id: 3, name: 'Charlie', age: 22, isEligible: true, ... }
+]
+
+8. Use map to create a new array of objects with an additional 'ageGroup' property:
+'Young': age < 25
+'Adult': age >= 25
+Output:
+[
+   { id: 1, name: 'Alice', age: 25, ageGroup: 'Adult', ... },
+   { id: 2, name: 'Bob', age: 30, ageGroup: 'Adult', ... },
+   { id: 3, name: 'Charlie', age: 22, ageGroup: 'Young', ... }
+]
+
+9. Add a 'uuid' property to each user, generating unique IDs like
+Output:
+[
+   { id: 1, name: 'Alice', uuid: 'user-1', ... },
+   { id: 2, name: 'Bob', uuid: 'user-2', ... },
+   { id: 3, name: 'Charlie', uuid: 'user-3', ... }
+]
+
+10. Use map to generate an array of objects where each hobby is transformed into a keyword object
+Output:
+[
+   { user: 'Alice', keywords: ['#Reading', '#Traveling'] },
+   { user: 'Bob', keywords: ['#Cooking', '#Cycling'] },
+   { user: 'Charlie', keywords: ['#Gaming', '#Drawing'] }
+]
+
+11. Generate an array of strings summarizing each user's age and hobbies
+Output:
+[
+   'Alice, aged 25, loves Reading and Traveling.',
+   'Bob, aged 30, loves Cooking and Cycling.',
+   'Charlie, aged 22, loves Gaming and Drawing.'
+]
