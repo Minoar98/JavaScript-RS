@@ -27,7 +27,7 @@ const array = [
 
 function func(value) {
   // console.log(value)
-  return `$${value.price}`;
+  return  `$${value.price}`;
 }
 
 const result = array.map(func);
