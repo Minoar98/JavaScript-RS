@@ -23,10 +23,11 @@ const people = [
 
 function func(person) {
   return person.marks === 80;
-  //   return 0;
 }
 
 const result = people.find(func);
 console.log(result.name);
 
 // alternatice way to fetch the name
+const personName = people.find(func).name;
+console.log('Name: ', personName);

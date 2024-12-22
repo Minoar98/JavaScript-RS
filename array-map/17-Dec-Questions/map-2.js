@@ -1,7 +1,7 @@
 // 2. Generate an array of strings like the following
 // Output: ['Alice is 25 years old', 'Bob is 30 years old', 'Charlie is 22 years old']
 
-Array: users = [
+const users = [
   {
     id: 1,
     name: "Alice",

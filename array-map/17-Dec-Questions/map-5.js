@@ -1,5 +1,10 @@
-// 4. Create an array of hobby counts for each user (i.e., the number of hobbies each user has).
-// Output: [2, 2, 2]
+// 5. Create an array of strings summarizing each user's hobbies.
+// Output:
+// [
+//    'Alice enjoys Reading and Traveling.',
+//    'Bob enjoys Cooking and Cycling.',
+//    'Charlie enjoys Gaming and Drawing.'
+// ]
 
 const users = [
   {
@@ -25,14 +30,9 @@ const users = [
   },
 ];
 
-function hobbyCount(user) {
-  return user.hobbies.length;
+function userHobbiesString(user) {
+  return `${user.name} enjoys ${user.hobbies.join(' & ')}`;
 }
 
-const result = users.map(hobbyCount);
+const result = users.map(userHobbiesString);
 console.log(result);
-
-// Es6
-
-const hobbyCounts = users.map((user) => user.hobbies.length);
-console.log(hobbyCounts)

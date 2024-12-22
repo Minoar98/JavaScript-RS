@@ -13,7 +13,7 @@ const arr = [
   },
 ];
 
-function func(value, index, arr) {
+function func(value) {
   // console.log(value);
   return {
     name: value.name,
