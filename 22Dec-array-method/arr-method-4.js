@@ -23,5 +23,12 @@ const users = [
 ];
 // 4. Sort descending order by country
 
-const descendingOrderByCountry = users.sort((a, b) => b.country - a.country);
+const descendingOrderByCountry = users.sort((a, b) => {
+  if (a.country > b.country) {
+    return 1;
+  } else if (a.country < b.country) {
+    return 1;
+  }
+  return 0;
+});
 console.log(descendingOrderByCountry);

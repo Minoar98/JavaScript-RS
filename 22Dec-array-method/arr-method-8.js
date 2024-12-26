@@ -7,7 +7,7 @@ const users = [
     hobbies: ["Reading", "Traveling"],
   },
   {
-    id: 2, 
+    id: 2,
     name: "Bob",
     age: 30,
     country: "UK",
@@ -21,8 +21,5 @@ const users = [
     hobbies: ["Gaming", "Drawing"],
   },
 ];
-
-// 1. Sort ascending order by age
-
-const ascendingOrderByAge = users.sort((a, b) => a.age - b.age);
-console.log(ascendingOrderByAge);
+// Now, Create an array where contains all the hobbies only where age is less or equal to 25 using reduce method
+// Output: ["Reading", "Traveling", "Gaming", "Drawing"]

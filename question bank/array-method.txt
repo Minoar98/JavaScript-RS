@@ -1,0 +1,120 @@
+const users = [
+  {
+    id: 1,
+    name: "Alice",
+    age: 25,
+    country: "USA",
+    hobbies: ["Reading", "Traveling"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    age: 30,
+    country: "UK",
+    hobbies: ["Cooking", "Cycling"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    age: 22,
+    country: "Canada",
+    hobbies: ["Gaming", "Drawing"],
+  },
+];
+
+1. Sort ascending order by age
+2. Sort descending order by age
+3. Sort ascending order by country
+4. Sort descending order by country
+5. Create an array where contains all the hobbies only where age is less or equal to 25.
+Output: ["Reading", "Traveling", "Gaming", "Drawing"]
+6. Create an array where contains all the hobbies only where age is equal to 30.
+Output: ["Cooking for Bob", "Cycling for Bob"]
+
+
+
+
+
+@Minoar vai
+
+Next Schedule: 27 Dec, 2024
+Time: 6~6:30 PM
+
+Sample Questions:
+
+1. arr = [[1, 2], [3, 4], [5]]. Flatten a nested array using reduce method.
+Output: [1, 2, 3, 4, 5]
+
+2. users = [
+  {
+    id: 1,
+    name: "Alice",
+    age: 25,
+    country: "USA",
+    hobbies: ["Reading", "Traveling"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    age: 30,
+    country: "UK",
+    hobbies: ["Cooking", "Cycling"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    age: 22,
+    country: "Canada",
+    hobbies: ["Gaming", "Drawing"],
+  },
+]
+Now, Create an array where contains all the hobbies only where age is less or equal to 25 using reduce method
+Output: ["Reading", "Traveling", "Gaming", "Drawing"]
+
+3. Same users array taken from Question-2. Create an array where contains all the hobbies only where age is equal to 30 using reduce method
+Output: ["Cooking for Bob", "Cycling for Bob"]
+
+4. Same users array taken from Question-2. Locate the first person from the 'USA'
+Output: 
+{
+    id: 1,
+    name: "Alice",
+    age: 25,
+    country: "USA",
+    hobbies: ["Reading", "Traveling"],
+}
+
+5. words = ['apple', 'banana', 'apple', 'cherry', 'banana', 'banana']. Generate a frequency count of words.
+Output: { apple: 2, banana: 3, cherry: 1 }
+
+6. numbers = [-10, 15, -20, 30, -5]. Calculate sum only positive numbers only using reduce method.
+Output: 45
+
+7. numbers = [-10, 15, -20, 30, -5]. Calculate sum only positive numbers using reduce & filter methods.
+Output: 45
+
+8. fruits = ['apple', 'banana', 'cherry']. Create an array of objects with an index property.
+Output: [{ item: 'apple', index: 0 }, { item: 'banana', index: 1 }, { item: 'cherry', index: 2 }]
+
+9. people = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 25 }
+]
+Now, group people by their age.
+Output: 
+{
+   '25': [{ name: 'Alice', age: 25 }, { name: 'Charlie', age: 25 }],
+   '30': [{ name: 'Bob', age: 30 }]
+}
+ 
+10. fruits = ['apple', 'banana', 'cherry', 'kiwi', 'apple', 'kiwi', 'orange']. Use forEach method to count occurrences of each character in a string.
+Output: { apple: 2, banana: 1, cherry: 1, kiwi: 2, orange: 1 }
+
+11. fruits = ['apple', 'banana', 'cherry', 'kiwi', 'apple', 'kiwi', 'orange']. Use reduce method to count occurrences of each character in a string.
+Output: { apple: 2, banana: 1, cherry: 1, kiwi: 2, orange: 1 }
+
+For question 1, 2, 3
+You have a restriction. Don't use flat() or flatMap() method or any other mentioned versions for today. Instead of flat() or flatMap() method, use reduce() method only to solve those problems.
+
+We can use reduce() method to flat any 2D array.

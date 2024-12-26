@@ -1,7 +1,7 @@
 // 1. Workable in an array
 // 2. Traverse
 // 3. Create a new array
-// 4. Length or size may or may not match with original array's length
+// 4. Length or size may or may not match with original array's length (less or equal to)
 // 5. Must use condition after 'return' keyword
 
 const arr = [10, 25, 30, 45];

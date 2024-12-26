@@ -7,7 +7,7 @@ const users = [
     hobbies: ["Reading", "Traveling"],
   },
   {
-    id: 2, 
+    id: 2,
     name: "Bob",
     age: 30,
     country: "UK",
@@ -22,7 +22,12 @@ const users = [
   },
 ];
 
-// 1. Sort ascending order by age
+// 6. Create an array where contains all the hobbies only where age is equal to 30.
+// Output: ["Cooking for Bob", "Cycling for Bob"]
 
-const ascendingOrderByAge = users.sort((a, b) => a.age - b.age);
-console.log(ascendingOrderByAge);
+const hobbies = users
+  .filter((user) => user.age === 30)
+  .flatMap((user) =>
+    user.hobbies.map((hobbies) => `${hobbies} for ${user.name}`)
+  );
+console.log(hobbies);
