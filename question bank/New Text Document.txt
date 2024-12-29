@@ -1,0 +1,7 @@
+function flattenNestArr(prev, curr) {
+  return [...prev, ...curr];  // Use spread syntax to merge arrays
+}
+
+const arr = [[1, 2], [3, 4], [5]];
+const result = arr.reduce(flattenNestArr, []);
+console.log(result);  // Output: [1, 2, 3, 4, 5]

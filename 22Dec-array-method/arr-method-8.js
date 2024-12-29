@@ -21,5 +21,15 @@ const users = [
     hobbies: ["Gaming", "Drawing"],
   },
 ];
-// Now, Create an array where contains all the hobbies only where age is less or equal to 25 using reduce method
-// Output: ["Reading", "Traveling", "Gaming", "Drawing"]
+// // Now, Create an array where contains all the hobbies only where age is less or equal to 25 using reduce method
+// // Output: ["Reading", "Traveling", "Gaming", "Drawing"]
+
+const personFromUsa = users.reduce((prev, curr) => {
+  if (curr.age <= 25) {
+    return prev.concat(curr.hobbies);
+  }
+  return prev;
+}, []);
+
+const result = personFromUsa;
+console.log(result);

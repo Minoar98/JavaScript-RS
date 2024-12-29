@@ -47,15 +47,15 @@ const userHobbies = filteredUsersBasedOnAge.map((user) => user.hobbies);
 //   });
 // });
 // console.log(allHobbies); // 1D Array
-// --------------- end -----------------------
+// // --------------- end -----------------------
 
 // Version 2. --------------- start -----------------------
-// const allHobbies = [];
-// userHobbies.forEach((hobbies) => {
-//   // console.log(hobbies); // Output: 1st iteration: [ 'Reading', 'Traveling' ], 2nd iteration: [ 'Gaming', 'Drawing' ]
-//   allHobbies.push(...hobbies); // spread operator (ES6)
-// });
-// console.log(allHobbies); // 1D Array
+const allHobbies = [];
+userHobbies.forEach((hobbies) => {
+  // console.log(hobbies); // Output: 1st iteration: [ 'Reading', 'Traveling' ], 2nd iteration: [ 'Gaming', 'Drawing' ]
+  allHobbies.push(...hobbies); // spread operator (ES6)
+});
+console.log(allHobbies); // 1D Array
 // --------------- end -----------------------
 
 // Version 3. --------------- start -----------------------
@@ -80,8 +80,8 @@ const userHobbies = filteredUsersBasedOnAge.map((user) => user.hobbies);
 // --------------- end -----------------------
 
 // Version 6. --------------- start -----------------------
-const allHobbies = users
-  .filter((user) => user.age <= 25)
-  .flatMap((user) => user.hobbies);
-console.log("Using chaining & flatMap(): ", allHobbies); // 1D Array
+// const allHobbies = users
+//   .filter((user) => user.age <= 25)
+//   .flatMap((user) => user.hobbies);
+// console.log("Using chaining & flatMap(): ", allHobbies); // 1D Array
 // --------------- end -----------------------
