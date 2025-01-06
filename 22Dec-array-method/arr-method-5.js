@@ -85,3 +85,19 @@ console.log(allHobbies); // 1D Array
 //   .flatMap((user) => user.hobbies);
 // console.log("Using chaining & flatMap(): ", allHobbies); // 1D Array
 // --------------- end -----------------------
+
+const filteredUsers = users.filter((user) => user.age <= 25); // [ { id: 1, hobbies: ['A', 'B'] } ]
+const twoDHobbies = filteredUsers.map((user) => user.hobbies); // [['A'], ['B']]
+const hobbies = twoDHobbies.flat() // ['A', 'B']
+
+// console.log("Using chaining & flatMap(): ", allHobbies); // 1D Array
+
+// const filteredUsers = users.find((user) => user.age <= 25); // { id: 1, hobbies: ['A', 'B'] }
+// const hobbies = filteredUsers.hobbies.flat(); // [['A'], ['B']]
+
+// console.log("Using find(): ", hobbies); // 1D Array
+
+// const filteredUsers = users.find((user) => user.age <= 25).hobbies.flat(); // { id: 1, hobbies: ['A', 'B'] }
+// const hobbies = filteredUsers.hobbies.flat(); // [['A'], ['B']]
+
+// console.log("Using find()---: ", filteredUsers); // 1D Array
