@@ -1,0 +1,15 @@
+1. ["hello", "world", "javascript", "is", "fun"] is an array. Create a new array like the output
+Output: 
+[ { word: 'hello', length: 5 }, { word: 'world', length: 5 }, { word: 'javascript', length: 10 }, { word: 'is', length: 2 }, { word: 'fun', length: 3 } ]
+
+2. ["apple", "banana", "pie", "cake", "orange"] is an array. Find out strings longer than 3 characters that also contain the letter 'a'.
+Output: ["apple", "banana", "orange"]
+
+3. [["hello", "world"], ["javascript", "is"], ["fun", "for", "everyone"]] is an array. Find the first occurrence of a word in a nested array.
+Output: javascript
+
+4. ["apple", "banana", "avocado", "grape"] is an array. Count the occurrences of the letter 'a' in an array of strings.
+Output: 6
+
+5. ["hello", "world", "javascript", "is", "fun"] is an array. Get a list/array of unique characters where strings longer than 2 and then count them.
+Output: ["h", "e", "l", "o", "w", "r", "d", "j", "a", "v", "s", "c", "i", "p", "t", "f", "u", "n"], 18
