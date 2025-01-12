@@ -6,7 +6,7 @@ const arr = ["hello", "world", "javascript", "is", "fun"];
 console.log(
   arr.map((word) => {
     return {
-      word: word,
+      word,
       length: word.length,
     };
   })

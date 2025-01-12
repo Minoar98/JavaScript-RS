@@ -23,7 +23,7 @@ arr1.reduce((prev, curr) => {
 
 console.log(removeDuplicates1);
 
-// sort
+// sort - H.W
 
 const arr2 = [5, 3, 3, 4, 2, 5, 1, 6];
 
