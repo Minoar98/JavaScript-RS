@@ -29,3 +29,9 @@ console.log(removeDuplicates2);
 // 5. sort
 // 6. Another way
 
+const arr1 = [5, 3, 3, 4, 2, 5, 1, 6];
+const setFromArray = new Set(arr1);
+const arrayFromSet = [...setFromArray];
+
+console.log(arrayFromSet);
+console.log([...new Set(arr1)]);

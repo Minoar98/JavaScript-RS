@@ -35,14 +35,13 @@ const arrayFromSet = [...setFromArray];
 console.log(arrayFromSet);
 console.log([...new Set(arr)]);
 
-
 // H.W
 // 1. Union -> [1, 2, 3, 4]
 // 2. Intersection -> [2, 3]
 // 2. Difference -> [2]
 
-const a = [1, 2, 3]
-const b = [2, 3, 4]
+// const a = [1, 2, 3];
+// const b = [2, 3, 4];
 
 // Remove duplicates using sort function
 // array-string-5
