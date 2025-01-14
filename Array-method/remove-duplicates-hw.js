@@ -29,4 +29,12 @@ const arr2 = [5, 3, 3, 4, 2, 5, 1, 6];
 
 const removeDuplicates2 = arr2.sort((a, b) => a - b);
 
-console.log(removeDuplicates2);
+console.log("sorted arr", removeDuplicates2);
+
+// another way
+
+const arr3 = [5, 3, 3, 4, 2, 5, 1, 6];
+const setFromArray = new Set([arr3]);
+const arrayFromSet = [...setFromArray];
+console.log(arrayFromSet);
+console.log([...new Set(arr3)]);
