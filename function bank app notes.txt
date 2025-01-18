@@ -18,12 +18,12 @@ Output Sequence...:
 
 
 A new user is created.
-User information: (print full informations)
+User information: (print full information)
 
-User information: (print full informations)
+User information: (print full information)
 
-User information updated.
-User information: (print full informations)
+User information is updated.
+User information: (print full information)
 
 Your account balance: X Tk.
 
@@ -38,4 +38,38 @@ A/C: XXX
 Your account balance: X Tk.
 
 You have closed your bank account.
-Tk. X Withdrawal
+Tk. X Withdrawal - [No money for withdrawal.]
+
+
+Data format
+
+[{}, {}]
+
+
+[
+	{
+		id: 1,
+		name: 'ABC',
+		bankInfo: {
+			accountNo: 'XXX'
+			balance: 0
+		}
+	},
+	{}
+]
+
+A/c format
+B3D*****3FA
+
+Deposit e Errol handling 1;
+withdraw error handling 2;
+close ACCOUNT E OPTIONAL CASE.
+
+ // {
+    //   id: Date.now().toString(),
+    //   name: "Rezoan Shakil Prince",
+    //   bankInfo: {
+    //     accountNo: "1711050007520",
+    //     balance: "$2000000000000",
+    //   },
+    // }
