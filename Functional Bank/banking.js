@@ -1,4 +1,4 @@
-// Create Account
+/*---------------------- Create Account start---------------------------*/
 
 const users = [
   {
@@ -25,3 +25,15 @@ function CreateAccount() {
 
 CreateAccount();
 console.log(users);
+
+/*---------------------- Create Account end---------------------------------*/
+
+/*---------------------- Create showUserInfo start--------------------------*/
+
+
+
+
+
+
+
+/*---------------------- Create showUserInfo end---------------------------*/
