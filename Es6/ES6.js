@@ -68,16 +68,16 @@ const [a, b, c] = ar;
 console.log(a, b, c);
 
 // ignoring
-const [x, , , z] = ar;
-console.log(x, z);
+// const [x, , , z] = ar;
+// console.log(x, z);
 
-// Number Swapping - Using math
-let a = 10;
-let b = 5;
+// // Number Swapping - Using math
+// let a = 10;
+// let b = 5;
 
-a = a + b; // 15
-b = a - b; // 10
-a = a - b; // 5
+// a = a + b; // 15
+// b = a - b; // 10
+// a = a - b; // 5
 
 console.log(a, b)
 
@@ -86,12 +86,12 @@ console.log(a, b)
 // b = 10
 
 // Number Swapping - Using array destructuring
-let a = 10;
-let b = 5;
+// let a = 10;
+// let b = 5;
 
-[b, a] = [a, b]
+// [b, a] = [a, b]
 
-console.log(a, b)
+// console.log(a, b)
 
 // output:
 // a = 5
