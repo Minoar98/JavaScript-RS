@@ -44,14 +44,24 @@
 //     },
 //   }
 
-/*---------------------- Create showUserInfo start--------------------------*/
-const showUserInfo = (userInfo) => {
-  console.log("User information: ", userInfo);
-};
-/*---------------------- Create showUserInfo end---------------------------*/
+// Constant values (convention)
+const MIN_DEPOSIT = 50;
+const MAX_WITHDRAW = 1000;
 
-/*---------------------- Create Account start---------------------------*/
-function createAccount(name, accNo, balance) {
+const hideAccountNo = (accNo) => {
+  return `${accNo.slice(0, 3)}${"*".repeat(accNo.length - 6)}${accNo.slice(
+    -3
+  )}`;
+};
+
+const showUserInfo = (userInfo) => {
+  console.log("User information:");
+  console.log("User Name: ", userInfo.name);
+  console.log("User A/C No: ", hideAccountNo(userInfo.bankInfo.accountNo));
+  console.log("User Balance: ", userInfo.bankInfo.balance);
+};
+
+function createAccount(name, accNo, balance = 0) {
   // A new user is created
   user = {
     id: Date.now().toString(),
@@ -66,7 +76,6 @@ function createAccount(name, accNo, balance) {
   // console.log("User information: ", user);
   showUserInfo(user);
 }
-/*---------------------- Create Account end---------------------------------*/
 
 const updateUserInfo = (userInfo, updatedName) => {
   userInfo.name = updatedName;
@@ -89,10 +98,20 @@ const closeAccount = (userInfo) => {
 
 const printBalance = (userInfo) => {
   console.log(`Tk. ${userInfo.bankInfo.balance} Balance`);
-  console.log(`A/C ${userInfo.bankInfo.accountNo}`);
+  console.log(`A/C ${hideAccountNo(userInfo.bankInfo.accountNo)}`);
 };
 
 const deposit = (userInfo, amount) => {
+  if (amount < 0) {
+    console.log("You have entered a invalid amount. Please correct it.");
+    return;
+  }
+
+  if (amount < MIN_DEPOSIT) {
+    console.log("You have to deposit at least 50 Tk");
+    return;
+  }
+
   userInfo.bankInfo.balance += amount;
 
   console.log(`Tk. ${amount} Deposit`);
@@ -102,6 +121,21 @@ const deposit = (userInfo, amount) => {
 };
 
 const withdraw = (userInfo, amount) => {
+  if (amount < 0) {
+    console.log("You have entered a invalid amount. Please correct it.");
+    return;
+  }
+
+  if (amount > MAX_WITHDRAW) {
+    console.log("You are allowed to withdraw at least 1000 Tk.");
+    return;
+  }
+
+  if (amount > userInfo.bankInfo.balance) {
+    console.log("Insufficient amount. Please try again later.");
+    return;
+  }
+
   userInfo.bankInfo.balance -= amount;
 
   console.log(`Tk. ${amount} Withdrawal`);
@@ -109,7 +143,7 @@ const withdraw = (userInfo, amount) => {
 };
 
 let user = null;
-createAccount("Syed Minaor Hasan", "1740850027450", 0);
+createAccount("Syed Minaor Hasan", "1740850027450");
 
 console.log();
 showUserInfo(user);
@@ -123,14 +157,20 @@ checkBalance(user);
 console.log();
 deposit(user, 200);
 
-// console.log();
-// deposit(user, 250);
+console.log();
+deposit(user, 25);
 
 console.log();
 withdraw(user, 100);
 
-// console.log();
-// withdraw(user, 15);
+console.log();
+withdraw(user, -15);
+
+console.log();
+withdraw(user, 1500);
+
+console.log();
+withdraw(user, 200);
 
 // console.log();
 // checkBalance(user);
@@ -146,7 +186,7 @@ closeAccount(user);
 
 // H/W
 // 1. Error handling in 'deposit' function (-ve case & low insertion)
-// 2. Error handling in 'withdraw' function (-ve case & low insertion case)
+// 2. Error handling in 'withdraw' function (-ve case & high withdrawal case)
 // 3. Make account invisible like: '174*******450' (only 'deposit' & 'withdraw' functions)
 
 // Further thinking
