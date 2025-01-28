@@ -27,9 +27,9 @@ const [, , [, x], , y] = nums;
 console.log(x, y);
 
 // Import/export
-// Tagged Template Literal
-// Map()
+// Tagged Template Literal - done
+// Map() - done
 // Splace()
-// Nullish Coaleshing -> ??
+// Nullish Coaleshing -> ?? - done
 // Optional Chaining
 // 
