@@ -1,3 +1,10 @@
+// Must see 'banking.js' file first
+
+// What I see
+// 1. Support multiple user
+// 2. Reuse code
+// 3. Default parameter
+
 // Constant values (convention)
 const MIN_DEPOSIT = 50;
 const MAX_WITHDRAW = 1000;
@@ -6,12 +13,9 @@ const hideAccountNo = (accNo) => {
   return `${accNo.slice(0, 3)}${"*".repeat(accNo.length - 6)}${accNo.slice(
     -3
   )}`;
-};
+}; // 170*******345
 
-const showUserInfo = (users, userId) => {
-  // console.log('=========', users, userId)
-  const userInfo = users.find(user => user.id === userId);
-
+const showUserInfo = (userInfo) => {
   console.log("User information:");
   console.log("User Name: ", userInfo.name);
   console.log("User A/C No: ", hideAccountNo(userInfo.bankInfo.accountNo));
@@ -34,7 +38,7 @@ function createAccount(name, accNo, balance = 0) {
 
   console.log("A new user is created");
   // console.log("User information: ", user);
-  showUserInfo(users, users[users.length-1].id);
+  showUserInfo(user);
 }
 
 const showAllUsers = (allUser) => {
@@ -46,7 +50,7 @@ const updateUserInfo = (users, userId, updatedName) => {
 
   user.name = updatedName;
   console.log("User information updated.");
-  showUserInfo(users, userId);
+  showUserInfo(user);
 };
 
 const checkBalance = (users, userId) => {
@@ -122,7 +126,7 @@ createAccount("Sakib Al Hasan", "1740850027400", 150);
 showAllUsers(users);
 
 console.log();
-showUserInfo(users, users[0].id);
+showUserInfo(users[0]);
 
 console.log();
 updateUserInfo(users, users[0].id, "Mr. Syed Minoar Hasan");
@@ -160,3 +164,4 @@ console.log();
 closeAccount(users, users[0].id);
 
 showAllUsers(users);
+
