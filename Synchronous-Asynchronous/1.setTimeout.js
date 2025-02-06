@@ -14,3 +14,8 @@ setTimeout(() => {
 setTimeout(() => {
   log();
 }, TIME * DURATION);
+
+// Vanilla function and it's a anonymous function
+setTimeout(function () {
+  log();
+}, TIME * DURATION);
