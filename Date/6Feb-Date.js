@@ -37,3 +37,22 @@ console.log(months[month]);
 
 const d4 = new Date(2025, 0, 25); // custom date
 console.log(months[d4.getMonth()]);
+
+const months1 = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+const d5 = new Date();
+const month1 = months[d.getMonth()];
+console.log(month1);
