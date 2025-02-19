@@ -90,3 +90,5 @@ function fullName4(firstName, lastName){
 }
 const fullNameResult1 = fullName4()
 console.log(fullName4("samin", "Farin"));
+
+
