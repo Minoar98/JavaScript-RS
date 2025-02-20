@@ -56,9 +56,15 @@ console.log(`The result is ${val}`);
 
 // 2. A function called "minOfTwo" takes two numbers as parameters and returns the smallest of the two.
 
-// const minOfTwo = (num1, num2) {
+const minOfTwo = (num1, num2) => {
+  return num1 < num2 ? num1 : num2;
+};
 
-// }
+const result3 = minOfTwo(10, 20); // Returns 10, since 10 is smaller
+console.log(result3); // Output: 10
+
+const result4 = minOfTwo(30, 15); // Returns 15, since 15 is smaller
+console.log(result4); // Output: 15
 
 //////A function takes a number & is divisible by 10
 
