@@ -11,3 +11,10 @@ while (i <= n) {
 }
 
 console.log(sum);
+
+const n1 = 50;
+let sum1 = 0;
+for (let j = 1; j <= n1; j++) {
+  sum1 += j ** 2;
+}
+console.log(sum1);
