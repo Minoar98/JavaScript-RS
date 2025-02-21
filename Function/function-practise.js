@@ -76,3 +76,11 @@ const val1 = dividedBy10(100);
 const val2 = dividedBy10(186);
 console.log(val1);
 console.log(val2);
+
+// write an arrow function which returns "Hello JavaScript" (by default) or return as my command
+
+const myfunction = (name = "JavaScript") => {
+  return `Hello ${name}`; //returns "Hello JavaScript"
+};
+const result5 = myfunction("React Js");
+console.log(result5);

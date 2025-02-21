@@ -10,7 +10,7 @@ console.log(result);
 // fahrenheit to celsius
 
 function convertToCelcius(f) {
-  return f - (32 * 5) / 9;
+  return ((f - 32) * 5) / 9;
 }
 
 const result1 = convertToCelcius(100);
