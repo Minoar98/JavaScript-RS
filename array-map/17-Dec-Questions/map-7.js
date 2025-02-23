@@ -40,3 +40,11 @@ function userNew(user) {
 
 const result = users.map(userNew);
 console.log(result);
+
+const newUser = (user) => ({
+  ...user,
+  isEligible: true,
+});
+
+const result1 = users.map(newUser);
+console.log(result1);

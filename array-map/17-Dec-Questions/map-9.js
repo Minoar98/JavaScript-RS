@@ -37,5 +37,21 @@ function userNew(user) {
   };
 }
 
-const result = users.map(userNew);
+const value = users.map(userNew);
+console.log(value);
+
+/// converted into arrow function
+// const newUser = (user) => {
+//   return {
+//     ...user,
+//     uuid: `user-${user.id}`,
+//   };
+// };
+
+const result = users.map((user) => {
+  return {
+    ...user,
+    uuid: `user-${user.id}`,
+  };
+});
 console.log(result);

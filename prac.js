@@ -1,9 +1,6 @@
-
-
 // // person.name = function () {
 // //     return (this.firstName + " " + this.lastName).toUpperCase();
 // //   };
-
 
 //   const person = {
 //      firstName:"Moonim",
@@ -30,7 +27,6 @@
 // //   myObj.myCars.car2;
 // //   myObj["myCars"]["car2"]
 
-
 // const greet = function(name){
 //     // return "Hello" + name + "!"
 //     return `Hello ${name}!`
@@ -38,7 +34,6 @@
 // };
 
 // console.log(greet ("Tasnia"));
-
 
 // function add(a, b) {
 //     return a + b
@@ -55,8 +50,6 @@
 // const messages = greatJob("home")
 // console.log(messages + "5 days in a week");
 
-
-
 // function greatJob() {
 //     return `work form`;
 // }
@@ -64,17 +57,13 @@
 // const message = greatJob("home"); // 'home' is passed as the argument
 // console.log(message); // Output: work from home!
 
-
-
 // (function myFunction() {
 //     console.log('Hello, World!');
 //   })()
 
-
 // function myFunction() {
 //     console.log('Hello, World!');
 //   }
-
 
 //   function toCelcius(f){
 //     return 5/9 *(f-32)
@@ -109,18 +98,17 @@
 // }
 // console.log(fullName1("Akib", "walik"));
 
-
 const sportsMan = {
   firstName: "Sachin",
-  lastName : "Tendulkar",
+  lastName: "Tendulkar",
   cenCury: 80,
-  totalCencury: function(){
-    return `${this.cenCury + 20} both odi and test`
-  }
-}
+  totalCencury: function () {
+    return `${this.cenCury + 20} both odi and test`;
+  },
+};
 
-console.log(sportsMan.totalCencury())
-console.log(sportsMan)
+console.log(sportsMan.totalCencury());
+console.log(sportsMan);
 
 // const footBaller ={
 //   name: "Cristiano Ronaldo",
@@ -136,17 +124,17 @@ console.log(sportsMan)
 // console.log(footBaller.totalGoals());
 // console.log(footBaller);
 
-function addNumber(num1, num2){
+function addNumber(num1, num2) {
   return num1 + num2;
 }
 
-const myNumber = addNumber(5, 3); 
+const myNumber = addNumber(5, 3);
 console.log(myNumber);
 
-function subNumber(a, b){
-  return a - b
+function subNumber(a, b) {
+  return a - b;
 }
 // const myFavNumber = subNumber(5, 3)
-const myFavNumber = subNumber(5, 3)
+const myFavNumber = subNumber(5, 3);
 console.log(subNumber);
-console.log('Hello world')
+console.log("Hello world");

@@ -31,8 +31,14 @@ const users = [
 ];
 
 function userHobbiesString(user) {
-  return `${user.name} enjoys ${user.hobbies.join(' & ')}`;
+  return `${user.name} enjoys ${user.hobbies.join(" & ")}`;
 }
 
 const result = users.map(userHobbiesString);
 console.log(result);
+
+const hobbiesUserString = users.map(
+  (user) => `${user.name} enjoys ${user.hobbies.join(" & ")}`
+);
+
+console.log(hobbiesUserString);

@@ -31,3 +31,10 @@ function usersNameAge(value) {
 
 const result = users.map(usersNameAge);
 console.log(result);
+
+/// converted into arrow function
+
+const NameUsersAge = users.map(
+  (value) => `${value.name} is ${value.age} years old`
+);
+console.log(NameUsersAge);

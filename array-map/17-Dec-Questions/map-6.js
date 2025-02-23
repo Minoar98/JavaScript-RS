@@ -6,7 +6,6 @@
 //    { id: 3, name: 'Charlie', age: 22, isEligible: true, ... }
 // ]
 
-
 const users = [
   {
     id: 1,
@@ -31,7 +30,6 @@ const users = [
   },
 ];
 
-
 function userProfileUrls(user) {
   return {
     ...user,
@@ -39,5 +37,15 @@ function userProfileUrls(user) {
   };
 }
 
-const result = users.map(userprofileUrls);
+const result = users.map(userProfileUrls);
 console.log(result);
+
+// convert into arrow function
+const userProfileUrls1 = (user) => ({
+  
+  ...user,
+  isEligible: true,
+});
+
+const result1 = users.map(userProfileUrls1);
+console.log(result1);

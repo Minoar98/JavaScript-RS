@@ -36,3 +36,15 @@ function userNewString(user) {
 
 const result = users.map(userNewString);
 console.log(result);
+// converted to arrow function
+
+// const newUserString = (user)=>{
+//   return `${user.name} aged ${user.age}, loves ${user.hobbies.join}("and")
+// };
+
+const newUserString = (user) => {
+  return `${user.name} aged ${user.age}, loves ${user.hobbies.join(" and ")}`;
+};
+
+const value = users.map(newUserString);
+console.log(value);

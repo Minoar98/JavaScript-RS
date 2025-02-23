@@ -33,3 +33,8 @@ function usersName(user) {
 
 const result = users.map(usersName);
 console.log(result);
+
+// convert into es6
+
+const nameUser = users.map((user) => user.name);
+console.log(nameUser);

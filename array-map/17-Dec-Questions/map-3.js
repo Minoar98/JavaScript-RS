@@ -39,3 +39,13 @@ function usersNameAge(value) {
 
 const result = users.map(usersNameAge);
 console.log(result);
+
+// convert into arrow function
+
+const nameAgeUser = users.map((value) => {
+  return {
+    ...value,
+    fullName: `${value.name} Smith`,
+  };
+});
+console.log(nameAgeUser);
