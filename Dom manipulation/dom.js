@@ -22,3 +22,5 @@ console.log(he1);
 
 const h22 = document.querySelectorAll(".hur");
 console.log(h22);
+
+
