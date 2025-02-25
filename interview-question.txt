@@ -41,6 +41,26 @@ Number, Boolean, string, array, object, statement.
 // 3. If found -> return that value, if not found 'undefined'
 // 4. Use condition after 'return' keyword in callback function
 
+
+
+//1. x= 10,y= 20. make it y = 10; x=20;
+// 2. arr=[1, 2, 3] assign that array into another variable.Now make any changes into arr varibale doesnot  affect another variable.
+// 3 ['I', 'love', 'JS', 'and', 'React JS'] sort according to element's length
+// 4. [1,2 , 3] and [4, 5, 6] -> how to merge two arrays (2 ways)
+// 5. people = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 25 }
+// ]
+// Now, group people by their age.
+// Output:
+// {
+//    '25': [{ name: 'Alice', age: 25 }, { name: 'Charlie', age: 25 }],
+//    '30': [{ name: 'Bob', age: 30 }]
+// }
+
+
+
 const arr = [10, 20, 30, 40, 50];
 
 function func(value) {
