@@ -1,0 +1,5 @@
+Find
+// 1. Traverse korbe
+// 2. Find the value
+// 3. If found -> return that value, if not found 'undefined'
+// 4. Use condition after 'return' keyword in callback function

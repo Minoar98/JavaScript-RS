@@ -16,6 +16,13 @@ const people = [
   { name: "Charlie", age: 25 },
 ];
 
-const peopleByAge = people.reduce((prev, curr)=>{
-  
-},{})
+const gorupPeopleByAge = people.reduce((prev, curr) => {
+  const age = curr.age; // age dore nici
+  if (!prev[age]) {
+    prev[age] = [];
+  }
+  prev[age].push(curr);
+  return prev;
+}, {});
+
+console.log(gorupPeopleByAge);
