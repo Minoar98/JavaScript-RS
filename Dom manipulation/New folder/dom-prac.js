@@ -26,13 +26,13 @@ console.log(h22[1].innerHTML);
 
 const h23 = document.getElementById("habi");
 console.log(h23.innerHTML);
-
+// id query seloctor
 h24 = document.querySelector("#cago");
 console.log(h24.innerHTML);
-
+// tag name
 const p132 = document.getElementsByTagName("p");
 console.log(p132[1].innerHTML);
 console.log(p132[0].innerHTML);
-
+// classname
 const p123 = document.getElementsByClassName("habu");
 console.log(p123[0].innerHTML);
