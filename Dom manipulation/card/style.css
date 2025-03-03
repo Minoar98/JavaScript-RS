@@ -14,11 +14,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.147);
   padding: 20px;
   text-align: center;
+  text-align: cente;
 }
 
 .card img {
-  width: 100%;
   border-radius: 10px;
+  width: 100%;
 }
 
 .card h2 {
@@ -29,7 +30,7 @@ body {
   color: #be0662;
 }
 
-.card button {
+.card .btn {
   background: #ff003c;
   color: white;
   border: none;
@@ -38,6 +39,25 @@ body {
   border-radius: 5px;
 }
 
-.card button:hover {
+.card .btn:hover {
   background: #b30039;
+}
+
+.card .btn1 {
+  background: #0b1fd3;
+  color: rgb(17, 143, 33);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card .btn1:hover {
+  background: #4c61a5;
+}
+
+.NewFont {
+  font-size: 60px;
+  padding: 40px 55px;
+  color: white;
 }

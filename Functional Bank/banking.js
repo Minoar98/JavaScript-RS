@@ -192,3 +192,7 @@ closeAccount(user);
 // Further thinking
 // 1. How to make it for multiple users
 // 2. Customize your code accordingly
+// TODO: ami kaj kori ni 
+// FIXME: KELNKARI KORCI
+// DEBUG:
+//NOTE: 
