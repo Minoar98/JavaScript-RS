@@ -36,8 +36,9 @@ pElement.style.fontWeight = "bold";
 const myButtonElement1 = document.querySelector(".btn"); // <button class='btn'></button>
 console.log(myButtonElement1);
 // myButtonElement1.className = "btn1"; // <button class='btn1'></button>
-myButtonElement1.className = "btn1"; // <button class='btn1 NewFont'></button>
-myButtonElement1.className += " NewFont"; // <button class='btn1 NewFont'></button>
+// myButtonElement1.className = "btn1"; // <button class='btn1'></button>
+// myButtonElement1.className += " NewFont"; // <button class='btn1 NewFont'></button>
+myButtonElement1.className = "btn1 NewFont"; // 2nd and recommended way
 
 // const myFontElement = document.className("NewFont");
 // console.log(myButtonElement1.innerHTML);

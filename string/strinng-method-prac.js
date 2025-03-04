@@ -77,3 +77,6 @@ console.log("matchAll ", Array.from(iterator), texts5);
 const texts6 = "Please locate where 'locate' occurs!";
 const allText3 = texts6.search("locate");
 console.log(allText3);
+
+const elements = "JavaScript";
+console.log(elements.substring(5, 2)); // "vaS" (JavaScript swaps indices)

@@ -41,13 +41,11 @@ h11.style.fontSize = "10px";
 h11.style.color = "#dddd";
 
 // My modification
-const p = document.getElementById('id1') // <p id='id1'>Hello world</p>
-p.className = "dite" // <p id='id1' class='dite'>Hello world</p>
-
+const p = document.getElementById("id1"); // <p id='id1'>Hello world</p>
+p.className = "dite"; // <p id='id1' class='dite'>Hello world</p>
 
 // <button>Button</button>
 // <button class='btn'>Button</button>
-
 
 // 1. string, array, methods
 // 2. Banking - single user
