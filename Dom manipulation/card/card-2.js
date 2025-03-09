@@ -1,5 +1,5 @@
 const newElement = document.createElement("p");
-newElement.innerHTML = 'ABC';
+newElement.innerHTML = "ABC";
 
 console.log(newElement);
 console.dir(newElement);
@@ -7,11 +7,15 @@ console.dir(newElement);
 document.body.appendChild(newElement);
 
 const newElement1 = document.createElement("p");
-newElement1.innerHTML = 'Minoar';
+newElement1.innerHTML = "Minoar";
 
-const div = document.querySelector('#card-id');
-div.appendChild(newElement1);
+const div = document.querySelector("#card-id");
 div.appendChild(newElement);
+div.appendChild(newElement1);
+
+
+//
+const newElement2 = document.createElement("card a:hover");
 
 // 1. Element tag create kora
 // 2. tag e content deya
@@ -23,7 +27,7 @@ div.appendChild(newElement);
 // new css id/class defined kora thakbe css file e
 // oita 'add' korben newly created tag e
 
-// 2. 
+// 2.
 // aro css id/class 'attach' korben kivabe
 
 // 3.
@@ -41,6 +45,7 @@ div.appendChild(newElement);
 // const obj = {
 //   // method
 //   newF: () => {
+
 //     return 15;
 //   }
 // }

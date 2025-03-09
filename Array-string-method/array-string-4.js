@@ -8,3 +8,4 @@ const result = arr.reduce((count, str) => {
 }, 0);
 
 console.log(result);
+     
