@@ -61,7 +61,22 @@ const showUserInfo = (userInfo) => {
   console.log("User Balance: ", userInfo.bankInfo.balance);
 };
 
-function createAccount(name, accNo, balance = 0) {
+// function createAccount(name, accNo, balance = 0) {
+//   // A new user is created
+//   user = {
+//     id: Date.now().toString(),
+//     name,
+//     bankInfo: {
+//       accountNo: accNo,
+//       balance,
+//     },
+//   };
+
+//   console.log("A new user is created");
+//   // console.log("User information: ", user);
+//   showUserInfo(user);
+// }
+const createAccount = (name, accNo, balance = 0) => {
   // A new user is created
   user = {
     id: Date.now().toString(),
@@ -71,11 +86,9 @@ function createAccount(name, accNo, balance = 0) {
       balance,
     },
   };
-
   console.log("A new user is created");
-  // console.log("User information: ", user);
   showUserInfo(user);
-}
+};
 
 const updateUserInfo = (userInfo, updatedName) => {
   userInfo.name = updatedName;
@@ -192,7 +205,7 @@ closeAccount(user);
 // Further thinking
 // 1. How to make it for multiple users
 // 2. Customize your code accordingly
-// TODO: ami kaj kori ni 
+// TODO: ami kaj kori ni
 // FIXME: KELNKARI KORCI
 // DEBUG:
-//NOTE: 
+//NOTE:
