@@ -5,7 +5,7 @@
 // Name: Mizanur Rahman
 // Father Name: Fazla Rabbi
 // Mother Name: Shimla Rahmann
-// DOB: 18-02-1789
+// DOB: 18-02-1989
 // NID No: 123-456-789
 
 const showNIDInfo = (nidInfo, nidNo, isThirdParty = false) => {
@@ -51,7 +51,7 @@ const info = {
   name: "Mizanur Rahman",
   fatherName: "Fazla Rabbi",
   motherName: "Shimla Rahmann",
-  dob: "18-02-1789",
+  dob: "18-02-1989",
   nidNo: "123-456-789",
 };
 
@@ -75,7 +75,7 @@ showNIDInfo(userNID, "123-456-783", true);
 // Name: Mizanur Rahman
 // Father Name: Fazla Rabbi
 // Mother Name: Shimla Rahmann
-// DOB: 18-02-1789
+// DOB: 18-02-1989
 // NID No: 123-456-789
 
 // 3. showNIDInfo() // Any third parties like bank/passport office etc
@@ -94,7 +94,7 @@ showNIDInfo(userNID, "123-456-783", true);
 // 1. updateNID()
 
 // You have updated 3 fields
-// User update information:
+// User information:
 // Name: Mizanur Rahman
 // Father Name: Mr. Fazla Rabbi
 // Mother Name: Shimla Rahman
@@ -113,12 +113,12 @@ showNIDInfo(userNID, "123-456-783", true);
 // The user is 36 years old
 
 // Instruction:
-// - Use arrow function - 3 marks
-// - Use default parameter - 3 marks
-// - Don't pass not more than 2 parameters in the function - 3 marks
-// - Use object destructure - 3 marks
-// - Use template literal - 3 marks
-// - Reuse already written function - 3 marks
+// - Use arrow function - 3 marks - done
+// - Use default parameter - 3 marks - done
+// - Don't pass not more than 3 parameters in the function - 3 marks - done
+// - Use object destructure - 3 marks - done
+// - Use template literal - 3 marks - done
+// - Reuse already written function - 3 marks - done
 
 // Overall presentation - 7 marks
 
@@ -149,7 +149,7 @@ showNIDInfo(userNID, "123-456-783", true);
 //   "Mizanur Rahman",
 //   "Fazla Rabbi",
 //   "Shimla Rahmann",
-//   "18-02-1789",
+//   "18-02-1989",
 //   "123-456-789"
 // );
 
