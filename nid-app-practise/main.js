@@ -1,5 +1,5 @@
 // Importing the createNID function
-import { createNID } from "./helper.js";
+import { createNID, showNIDInfo } from "./utils/helper.js";
 
 // Defining the user info object
 const info = {

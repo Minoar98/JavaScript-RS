@@ -19,9 +19,13 @@ const createNID = (info) => {
   };
 
   console.log("A new NID for an user is created.");
-  // showNIDInfo(userNID, info);
+  showNIDInfo(userNID, info);
 
   return userNID;
 };
 
-export { createNID };
+const showNIDInfo = (nidInfo, nidNo, isThirdParty = false) => {
+  const { name, fatherName, motherName, dob, nidNo } = nidInfo;
+};
+
+export { createNID, showNIDInfo };
