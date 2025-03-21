@@ -50,8 +50,7 @@ const updatedInfo2 = {
 userNID = updateNID(userNID, updatedInfo2, "123-456-789");
 
 console.log("=============== Calculate Age =======================");
-// dob: "19-02-1789"
-// Date '1789-02-19'
+
 calculateAge(userNID, "123-456-789");
 
 console.log("=============== Delete NID (Not Found) =======================");

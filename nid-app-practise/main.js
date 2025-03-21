@@ -1,4 +1,10 @@
-import { createNID, showNIDInfo } from "./utils/helper.js";
+import {
+  createNID,
+  showNIDInfo,
+  updateNID,
+  deleteNID,
+  calculateAgeBasedOnCurrentYear as calculateAge,
+} from "./utils/helper.js";
 
 const info = {
   name: "Mizanur Rahman",
@@ -24,3 +30,30 @@ console.log(
   "=============== Show NID For Third Party like Passport Office ======================="
 );
 showNIDInfo(userNID, "123-456-783", true);
+console.log("=============== Update NID =======================");
+const updatedInfo = {
+  fatherName: "Mr.Fazla Rabbi",
+  motherName: "Shimla Rahman",
+  dob: "19-02-1789",
+};
+
+updateNID(userNID, updatedInfo, "123-456-789");
+
+console.log("=============== Update NID (2) =======================");
+const updatedInfo2 = {
+  motherName: "Shimla Akther",
+  nidNo: "123-456-789",
+};
+userNID = updateNID(userNID, updatedInfo2, "123-456-789");
+
+console.log("=============== Calculate Age =======================");
+// dob: "19-02-1789"
+// Date '1789-02-19'
+calculateAge(userNID, "123-456-789");
+
+console.log("=============== Delete NID (Not Found) =======================");
+userNID = deleteNID(userNID, "123-456-784");
+
+console.log("=============== Delete NID (2) =======================");
+userNID = deleteNID(userNID, "123-456-789");
+console.log(userNID);
