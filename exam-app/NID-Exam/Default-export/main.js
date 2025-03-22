@@ -1,26 +1,27 @@
-import {
-  createNID,
+// Import (named & default)
+import createNID, {
   showNIDInfo,
   updateNID,
   deleteNID,
-  calculateAgeBasedOnCurrentYear as calculateAge,
+  calculateAgeBasedOnCurrentYear as calculateAge, // Using alias
 } from "./utils/helper.js";
 
 const info = {
   name: "Mizanur Rahman",
   fatherName: "Fazla Rabbi",
   motherName: "Shimla Rahmann",
-  dob: "18-02-1789",
+  dob: "18-02-1989",
   nidNo: "123-456-789",
 };
 
 // main object
-
 let userNID = {};
 console.log("=============== Create NID =======================");
 userNID = createNID(info);
-console.log("===============show NID for myself =======================");
+
+console.log("=============== Show NID For Myself =======================");
 showNIDInfo(userNID, "123-456-789");
+
 console.log(
   "=============== Show NID For Third Party like Bank ======================="
 );
@@ -30,14 +31,15 @@ console.log(
   "=============== Show NID For Third Party like Passport Office ======================="
 );
 showNIDInfo(userNID, "123-456-783", true);
+
 console.log("=============== Update NID =======================");
 const updatedInfo = {
-  fatherName: "Mr.Fazla Rabbi",
+  fatherName: "Mr. Fazla Rabbi",
   motherName: "Shimla Rahman",
-  dob: "19-02-1789",
+  dob: "19-02-1989",
+  nidNo: "123-456-789",
 };
-
-updateNID(userNID, updatedInfo, "123-456-789");
+userNID = updateNID(userNID, updatedInfo, "123-456-789");
 
 console.log("=============== Update NID (2) =======================");
 const updatedInfo2 = {
