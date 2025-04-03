@@ -1,0 +1,42 @@
+1.create. 
+a.enter kora input er length 0 hole create korbo na.
+b.  vul korco je tmi alert dite show korte hbe. o hoite parbe na.
+c. enter kora input r length 10 r upper hole create korbo na.
+d. length 10 er beshi hole alert dibo.
+e. validation pass korle pending task create korbo.
+
+2. Remove from completed task
+a delete icon e click korle whole element remove kore dibo.Auto content cole jbe
+
+3.Pending to completed task
+a. pending task e click korle task content save kore rakbo.
+b. pending task element ta delete kore dibo
+c. completed task e new element create korbo.
+d. oi element e save kora content bosabo.
+
+4.Edit task
+a. edit icon e click korle pending task er content input field e dekate hebe.
+b. then button name should be "Edit Task".
+c. "Edit Task" button e click korle oi pending task update hye jbe.
+d. user ke bujate hbe edit hyace like ("Task 1 (edited)")
+e. edit korar somoy input length 0 hole edit korte dibo na and show alert.ki vul hoice
+f. edit korar somoy input length 10  upper hole edit korte dibo na and show alert.ki vul hoice
+
+
+Function
+
+1 addEventlistener method lagbe.alert function lagbe
+2. getElementbyId/ querySelector
+3. createElement
+4. RemoveChild lagbe
+5. appendChild lagbe
+5.innerHTML
+6. tempelate literal (edit task r jnoo ar content task update er jnnoo lagbe)
+
+tips:
+1st tag gula ke dorce
+eventlistener  add button e lagabo
+
+
+
+

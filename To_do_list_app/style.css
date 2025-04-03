@@ -1,0 +1,71 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: #cde6c7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  padding: 8px 15px;
+  background-color: #31b6bd;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+article,
+aside {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 45%;
+}
+article h3,
+aside h3 {
+  text-align: center;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+.task input {
+  margin-right: 5px;
+}
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

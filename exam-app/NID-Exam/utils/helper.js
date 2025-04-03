@@ -2,8 +2,9 @@
 // Named export - a lot
 
 const createNID = (info) => {
+  // Way-01
   // Using object destructuring
-  const { name, fatherName, motherName, dob, nidNo } = info;
+  // const { name, fatherName, motherName, dob, nidNo } = info;
 
   // create nid for an user
   // const userNID = {
@@ -15,11 +16,19 @@ const createNID = (info) => {
   //   nidNo,
   // };
 
-  // Alternate
+  // Way-2: Alternate
   const userNID = {
     id: Date.now().toString(),
     ...info,
   };
+
+  // Way-3: Alternate
+  // info.id = Date.now().toString();
+  // return info;
+
+  // Way-4: Alternate
+  // info['id'] = Date.now().toString();
+  // return info;
 
   console.log("A new NID for an user is created.");
   showNIDInfo(userNID, info.nidNo);
