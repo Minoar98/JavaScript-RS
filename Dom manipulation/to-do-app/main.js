@@ -1,8 +1,9 @@
 const newTask = document.getElementById("input");
 const addTask = document.getElementById("btn");
 const pendingTask = document.getElementById("pending-task");
-const deleteIcon = document.getElementById("btn-del");
+const deleteTask = document.getElementById("btn-del");
 const cTask = document.getElementById("ctask");
+
 // Add task
 const addTaskFn = () => {
   // console.log("click korci");
@@ -58,5 +59,10 @@ const deleteTaskFn = () => {
   cTask.remove();
 };
 
+//pending task
+
+const pendingTaskFn = () => {};
+
 addTask.addEventListener("click", addTaskFn);
-deleteIcon.addEventListener("click", deleteTaskFn);
+deleteTask.addEventListener("click", deleteTaskFn);
+pendingTask.addEventListener("click");

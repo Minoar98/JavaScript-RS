@@ -43,7 +43,7 @@ button {
   border-radius: 5px;
 }
 #btn-del {
-  background-color: rgb(255, 230, 0);
+  background-color: transparent;
 }
 article {
   display: flex;
