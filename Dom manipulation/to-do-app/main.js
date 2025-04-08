@@ -3,6 +3,7 @@ const addTask = document.getElementById("btn");
 const pendingTask = document.getElementById("pending-task");
 const deleteTask = document.getElementById("btn-del");
 const cTask = document.getElementById("ctask");
+const checkBox = document.getElementById("checkbox");
 
 // Add task
 const addTaskFn = () => {
@@ -61,8 +62,23 @@ const deleteTaskFn = () => {
 
 //pending task
 
-const pendingTaskFn = () => {};
+// const pendingTaskFn = (e) => {
+//   if (e.target === "checkbox") {
+//   }
+
+//   // Remove from pending
+//   pendingTask.removeChild(li);
+// };
+
+const checkBoxFn = () => {
+  console.log("ahhahjaja");
+
+  console.log(checkBox.nextElementSibling.innerHTML);
+  checkBox.parentNode.remove();
+  
+};
 
 addTask.addEventListener("click", addTaskFn);
 deleteTask.addEventListener("click", deleteTaskFn);
-pendingTask.addEventListener("click");
+// pendingTask.addEventListener("click", pendingTaskFn);
+checkBox.addEventListener("change", checkBoxFn);

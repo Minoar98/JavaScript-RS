@@ -36,10 +36,6 @@ Number, Boolean, string, array, object, statement.
 // falsy value - 6
 // 0, false, null, undefined, NaN, ''
 
-// 1. Traverse korbe
-// 2. Find the value
-// 3. If found -> return that value, if not found 'undefined'
-// 4. Use condition after 'return' keyword in callback function
 
 
 
@@ -77,12 +73,6 @@ if (arrValue) {
 
 console.log(arrValue ? 'Found' : 'Not Found'
 
-Filter:
-// 1. Workable in an array
-// 2. Traverse
-// 3. Create a new array
-// 4. Length or size may or may not match with original array's length (less or equal to)
-// 5. Must use condition after 'return' keyword
 
 
 const ar = [null, 3, '', 'JS'];
@@ -110,3 +100,12 @@ Math.floor((Math.random() * 10) + 1);
 
 0 to 9 randomly find the number
 Math.floor((Math.random() * 10));
+
+
+
+const a = new Set([1, 2, 3]);
+const b = new Set([2, 3, 4]);
+
+const unionSet = new Set([...a, ...b]);
+console.log([...unionSet]);
+

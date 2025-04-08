@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+
+    <!-- <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2> -->
+    <h2 onclick="this.innerHTML='Ooops!'">Click on the text!</h2>
+    <h2 onclick="changeText(this)">Click on!</h2>
+    <button onclick="displayDate()">Try it</button>
+    <p id="demo"></p>
+    <button id="myBtn">Try it</button>
+
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: #d94a38;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Click Me
+    </div>
+
+    <h1 id="id01">My First Page</h1>
+    <p id="id02"></p>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
