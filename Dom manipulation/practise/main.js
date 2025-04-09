@@ -95,3 +95,7 @@ console.log(secondChild.firstElementChild.nextElementSibling); // next sibling d
 
 console.log(secondChild.lastElementChild);
 console.log(secondChild.firstElementChild.nextElementSibling); // next sibling dorci
+
+const imageElement = document.createElement("img");
+imageElement.setAttribute("src", "doua.JPG");
+document.body.appendChild(imageElement);

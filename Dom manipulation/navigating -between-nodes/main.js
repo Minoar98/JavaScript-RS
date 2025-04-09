@@ -10,3 +10,4 @@ console.log(secondChild.firstChild.nodeValue);
 console.log(secondChild.lastElementChild); // last child dorci
 console.log(secondChild.firstElementChild.nextElementSibling); // next sibling dorci
 console.log(secondChild.lastElementChild.previousElementSibling); // previous sibling dorci
+
