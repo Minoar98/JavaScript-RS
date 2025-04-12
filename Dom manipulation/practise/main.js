@@ -31,9 +31,15 @@ div.appendChild(h11);
 
 // remove//
 // const h4Element = document.getElementById("h4");
+// const h4Element = document.getElementsByClassName("rm")[0];
+const h4Element = document.querySelector(".rm");
+console.log(h4Element);
+// const h4Elements = document.getElementsByClassName("rm");
+
 const divElement = document.querySelector("#div2");
 // divElement.removeChild(h4Element);
 // document.body.removeChild(divElement);
+// document.body.remove(divElement);
 
 const div3 = document.getElementById("div3");
 document.body.removeChild(div3);
@@ -60,13 +66,14 @@ document.body.replaceChild(main, div);
 const pEle = document.createElement("p");
 pEle.innerHTML = "Jiboner 1st programming language JavaScript";
 
-const h4Elements = document.getElementById("h4");
+const h4Elements = document.getElementsByClassName("rm")[0];
 divElement.replaceChild(pEle, h4Elements);
 
 // eventlistener
 
 const btn = document.getElementById("btn");
 const btn1 = document.getElementById("btn-1");
+const btn2 = document.getElementById("btn-2");
 
 // function
 
@@ -77,12 +84,16 @@ const btnFn = () => {
 const btnFn1 = () => {
   alert("Hello World!");
 };
+const btnFn2 = () => {
+  alert("Hello World!");
+};
 
 // add
 
 // event listener
 btn.addEventListener("click", btnFn);
 btn1.addEventListener("click", btnFn1);
+btn2.removeEventListener("click", btnFn2);
 
 ///
 const pChild = document.getElementById("pChild");
@@ -97,5 +108,10 @@ console.log(secondChild.lastElementChild);
 console.log(secondChild.firstElementChild.nextElementSibling); // next sibling dorci
 
 const imageElement = document.createElement("img");
-imageElement.setAttribute("src", "doua.JPG");
+imageElement.setAttribute("src", "img/doua.JPG");
 document.body.appendChild(imageElement);
+
+///
+
+const pElements = document.getElementById("para");
+pElements.remove();
