@@ -49,3 +49,31 @@ const newP = {
   price: 2,
   title: "P2", // Update
 };
+
+// Create an Object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
+
+// Destructuring Assignment
+let { firstName, age } = person;
+
+// Create a Map
+const fruits = new Map([
+
+
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200],
+]);
+
+const numb = fruits.get("apples");
+console.log(numb);
+
+let l = arr.length;
+for (let i = 0; i < l; i++) {
+  
+}

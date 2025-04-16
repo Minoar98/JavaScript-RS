@@ -109,3 +109,116 @@ const b = new Set([2, 3, 4]);
 const unionSet = new Set([...a, ...b]);
 console.log([...unionSet]);
 
+
+// 2. Intersection -> [2, 3]
+// 2. Difference -> [2]
+
+set
+
+// No duplicate values
+// Like an array
+
+// diff between array & set
+// 1. array contains duplicate values, set does not
+// 2. array maintains ordering, set doesn't
+
+
+
+
+
+break	        Stops the whole loop
+continue	Skips one loop step and goes on
+
+higherorder function
+
+jodi kno function  parameter akare ekta function ney
+jodi kno function  parameter faka thaka function and function return kore
+both
+
+
+1. What is the difference between method & function?
+2. What is higher order function?
+3. What is the difference between `??` and `||`
+4. What is the output of the following code:
+
+```
+const ar = ['apple', 'orange', 'kiwi']
+
+console.log(ar.shift()); //shift() removes the first element
+```
+5. Where do we use `...` syntax?   const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4]; 
+console.log(arr2); // [1, 2, 3, 4]
+
+6. You have an array `[1, 2, 3, 4, 5]`. How to fetch only first & fifth element using ES6 Syntax.
+7. How many `false` value present in javascript? undefined,NaN, "",null, 0, false
+,8. `14 + 2 + 'JS' + 4` what is the output?
+9. Difference between `undefined` vs `null`? A variable has been declared but not assigned a value.
+A variable has been explicitly set to “no value”
+10. In which case, I use `==` & `===`?  console.log(null == undefined);  // true  (loose equality)
+console.log(null === undefined); // false (strict equality)
+
+11. What is the output of the code? `"Hello" - "World"` = ? NaN
+12. Did you describe the following code? `const x = x => x`
+13. I want to use `var` instead of `let` & `const`. Then what should I do?
+14. Could you please fix the bug of the code?
+
+```js
+const person = {
+    name: 'Ronaldo',
+    jerseyNo: 7
+}
+
+const { name, jerseyNo } = person;
+console.log(jerseyNumber);
+
+// Rules:
+// 1. I want to print exact `jerseyNumber` variable
+// 2. Can't use any extra variable
+```
+15. What is the output of the code?
+
+```js
+let name = "W3Schools";
+
+// Destructuring
+let [a1, a2, a3, a4, a5] = name;
+console.log(a2);
+```
+
+16. What is the output of the code?
+
+```js
+let name = "W3Schools";
+
+// Destructuring
+let [a1, a2, a3, a4, ...a5] = name;
+console.log(a5);
+```
+
+17. Describe it. `{ x }`
+what is operator?
+what is array?
+why do you use array?
+21. `x++` & `++x`
+
+​
+Would it print 4 or error?​
+4.​ Q:​
+​
+function varAndLetScoping() {
+  var x = 1;
+  if (true) {
+    let x = 2;
+    console.log(x);
+  }
+  console.log(x);
+}​
+
+​
+A: Within if block -> 2, outside 1​
+
+5.​ Q: What is js operator?​  Operators are tools you use to do things with variables or values — like adding numbers, comparing values, or assigning data.
+6.​ Q: Difference between x++ and ++x.​
+7.​ Q: What is coercion in javascript?​
+8.​ Q: What is an array?​ 
