@@ -1,8 +1,6 @@
 const newTask = document.getElementById("input");
 const addTask = document.getElementById("btn");
 const pendingTask = document.getElementById("pending-task");
-const deleteTask = document.getElementById("btn-del");
-const cTask = document.getElementById("ctask");
 const checkBox = document.getElementById("checkbox");
 
 // Add task
@@ -54,31 +52,60 @@ const addTaskFn = () => {
   newTask.value = "";
 };
 
-// delete
-
-const deleteTaskFn = () => {
-  cTask.remove();
-};
-
 //pending task
 
-// const pendingTaskFn = (e) => {
-//   if (e.target === "checkbox") {
-//   }
+// const checkBoxFn = () => {
+//   console.log("ahhahjaja");
 
-//   // Remove from pending
-//   pendingTask.removeChild(li);
+//   console.log(checkBox.nextElementSibling.innerHTML);
+//   checkBox.parentNode.remove();
 // };
 
-const checkBoxFn = () => {
-  console.log("ahhahjaja");
-
-  console.log(checkBox.nextElementSibling.innerHTML);
-  checkBox.parentNode.remove();
-  
-};
-
 addTask.addEventListener("click", addTaskFn);
-deleteTask.addEventListener("click", deleteTaskFn);
-// pendingTask.addEventListener("click", pendingTaskFn);
-checkBox.addEventListener("change", checkBoxFn);
+// checkBox.addEventListener("change", checkBoxFn);
+
+// Delete All
+document.querySelectorAll("#btn-del").forEach((button) => {
+  button.addEventListener("click", () => {
+    let ctask = button.parentNode;
+    if (ctask) {
+      ctask.remove();
+    }
+  });
+});
+
+// For checkbox
+document.querySelectorAll(".edit").forEach((button) => {
+  button.addEventListener("click", () => {
+    let p = button.previousElementSibling;
+    if (p) {
+      console.log(p.innerHTML);
+      newTask.value = p.innerHTML;
+
+      button = newTask.nextElementSibling;
+      console.log("button: ", button);
+      button.innerHTML = "Edit Task";
+
+      button.addEventListener("click", (event) => {
+        console.log("newTask: ", newTask, newTask.value);
+        let value = newTask.value;
+        console.log("value: ", value);
+        console.log("value2: ", event.target.value);
+
+        // if (value === "") {
+        //   alert("😮 Task cannot be empty");
+        //   return;
+        // }
+
+        // if (value.length > 10) {
+        //   alert("😮 Task cannot be more than 10");
+        //   return;
+        // }
+
+        p.innerHTML = `${value} (edited)`;
+        button.innerHTML = "Add Task";
+        newTask.value = "";
+      });
+    }
+  });
+});

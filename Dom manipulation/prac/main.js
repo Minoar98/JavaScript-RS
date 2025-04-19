@@ -7,8 +7,6 @@ console.log(pChild.parentNode);
 
 const secondChild = document.getElementById("secondChild");
 
-// console.log(secondChild.firstElementChild.nodeValue);
-
 // firstElementChild — first element tag access kortesi
 console.log(secondChild.firstElementChild);
 
@@ -45,6 +43,7 @@ const btnFn2 = () => {
 // event listener
 btn.addEventListener("click", btnFn);
 btn1.addEventListener("click", btnFn1);
+btn2.addEventListener("click", btnFn2);
 btn2.removeEventListener("click", btnFn2);
 
 // remove
@@ -55,7 +54,7 @@ pEle.remove();
 // get attribuite
 
 const h1Ele = document.getElementById("h1");
-const text = h1Ele.getAttribute("class");
+const text = h1Ele.getAttribute("class"); // class paici
 console.log(text);
 
 // set attribuite
@@ -68,3 +67,7 @@ h11Ele.setAttribute("class", "updated");
 
 //  add a style
 h11Ele.setAttribute("style", "color: red; font-size: 30px;");
+
+const aEle = document.getElementById("a");
+aEle.innerHTML = "google";
+aEle.setAttribute("href", "https://www.google.com/");

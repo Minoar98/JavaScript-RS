@@ -7,33 +7,44 @@
     <title>Todo Application</title>
   </head>
   <body>
-    <div class="container">
-      <h2>Todo Application</h2>
+    <main>
+      <h1>Todo Application</h1>
       <div class="task-input">
-        <input type="text" placeholder="Enter task..." />
-        <button>Add Task</button>
+        <input id="input" type="text" placeholder="Enter a task" />
+        <button id="btn">Add Task</button>
       </div>
-      <main>
-        <article>
-          <h3>Pending Tasks</h3>
-          <div class="task">
-            <input type="checkbox" /> Task 1
-            <button class="edit-btn">✏️</button>
-          </div>
-          <div class="task">
-            <input type="checkbox" /> Task 2
-            <button class="edit-btn">✏️</button>
-          </div>
-          <div class="task">
-            <input type="checkbox" /> Task 3
-            <button class="edit-btn">✏️</button>
-          </div>
-        </article>
-        <aside>
-          <h3>Completed Tasks</h3>
-          <div class="task">Task 4 <button class="delete-btn">🗑️</button></div>
-        </aside>
-      </main>
-    </div>
+      <article>
+        <section class="task-list">
+          <h2>Pending Tasks</h2>
+          <ul id="pending-task">
+            <li>
+              <input id="checkbox" type="checkbox" />
+              <p>Task 1</p>
+              <button class="edit">✏️</button>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Task 2</p>
+              <button class="edit">✏️</button>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Task 3</p>
+              <button class="edit">✏️</button>
+            </li>
+          </ul>
+        </section>
+        <section class="task-list">
+          <h2>Completed Tasks</h2>
+          <ul>
+            <li id="ctask">
+              <p>Task 4</p>
+              <button id="btn-del">🗑️</button>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <script src="./main.js"></script>
   </body>
 </html>
