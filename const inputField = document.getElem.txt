@@ -1,0 +1,166 @@
+const inputField = document.getElementById("input");
+const addTaskBtn = document.getElementById("btn");
+const pendingTask = document.getElementById("pending-task");
+const completedTask = document.getElementById("completed-task");
+👉 এই চারটা getElementById দিয়ে HTML এর ভিতরের ID অনুযায়ী element গুলোকে JavaScript এ ধরে রাখা হয়েছে।
+
+inputField → যেটাতে টেক্সট লিখো (ইনপুট ফিল্ড)।
+
+addTaskBtn → যেটা চাপলে টাস্ক যোগ হয় (Add Task বাটন)।
+
+pendingTask → যেখানে নতুন টাস্কগুলো লিস্ট হয়।
+
+completedTask → যেখানে শেষ হওয়া টাস্কগুলো যাবে।
+
+🔶 এটা ২টা ভ্যারিয়েবল যা টাস্ক এডিট করার জন্য ব্যবহার হয়:
+js
+Copy
+Edit
+let isEditing = false;
+let taskToEdit = null;
+isEditing → যদি true হয়, তার মানে টাস্ক এডিট হচ্ছে।
+
+taskToEdit → কোন টাস্কটা এডিট হচ্ছে সেটা ধরে রাখে।
+
+✅ এই ফাংশনে টাস্ক অ্যাড বা এডিট হয়:
+js
+Copy
+Edit
+const addOrEditTaskFn = () => {
+  let taskText = inputField.value.trim();
+ইউজার যেটা ইনপুট ফিল্ডে টাইপ করেছে, সেটা নিয়ে আসে। .trim() দিয়ে সামনে/পিছনে ফাঁকা স্পেস কেটে দেয়।
+
+🛑 টাস্ক ফাঁকা হলে বা ১০ অক্ষরের বেশি হলে অ্যালার্ট দেখায়:
+js
+Copy
+Edit
+  if (taskText === "") {
+    alert("😮 Task cannot be empty");
+    return;
+  }
+
+  if (taskText.length > 10) {
+    alert("😮 Task cannot be more than 10");
+    return;
+  }
+✏️ টাস্ক এডিট করা হচ্ছে কিনা চেক করে:
+js
+Copy
+Edit
+  if (isEditing) {
+    const p = taskToEdit.querySelector("p");
+    p.textContent = taskText;
+    p.style.fontWeight = "bold";
+
+    addTaskBtn.textContent = "Add Task";
+    inputField.value = "";
+    isEditing = false;
+    taskToEdit = null;
+  }
+যদি isEditing true হয়, তাহলে আগের টাস্কের টেক্সট আপডেট করে।
+
+ইনপুট ফিল্ড ক্লিয়ার করে এবং আবার আগের মতো set করে।
+
+🆕 যদি নতুন টাস্ক হয়, তাহলে নতুন করে একটা <li> বানায়:
+js
+Copy
+Edit
+  else {
+    const li = document.createElement("li");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const button = document.createElement("button");
+এখানে নতুন li, input, p, button তৈরি করে।
+
+তাদের মধ্যে প্রপার্টি সেট করে:
+js
+Copy
+Edit
+    input.type = "checkbox";
+    p.innerHTML = taskText;
+    button.className = "edit";
+    button.innerHTML = "✏️";
+চেকবক্স তৈরি, টেক্সট বসানো, এবং এডিট বাটনের জন্য আইকন বসানো হয়।
+
+সবগুলা জিনিস <li> তে বসিয়ে দেয়:
+js
+Copy
+Edit
+    li.appendChild(input);
+    li.appendChild(p);
+    li.appendChild(button);
+
+    pendingTask.appendChild(li);
+    inputField.value = "";
+  }
+};
+সবকিছু মিলিয়ে pendingTask লিস্টে অ্যাড করে।
+
+✅ চেকবক্স টিক দিলে টাস্ক "Completed" লিস্টে যায়:
+js
+Copy
+Edit
+const moveToCompleted = (taskItem) => {
+  const p = taskItem.querySelector("p");
+  const li = document.createElement("li");
+  const button = document.createElement("button");
+
+  button.id = "btn-del";
+  button.textContent = "🗑️";
+
+  li.appendChild(p);
+  li.appendChild(button);
+  completedTask.appendChild(li);
+
+  taskItem.remove();
+};
+চেকবক্সে টিক দিলে টাস্কটা completedTask-এ পাঠিয়ে দেয়।
+
+সাথে ডিলিট বাটন বসায়, আর আগের জায়গা থেকে টাস্কটা সরিয়ে দেয়।
+
+📌 "Add Task" বাটনে ক্লিক করলে addOrEditTaskFn() চালায়:
+js
+Copy
+Edit
+addTaskBtn.addEventListener("click", addOrEditTaskFn);
+🔄 যদি চেকবক্স চেক হয়, তখন টাস্ক কমপ্লিট করা হয়:
+js
+Copy
+Edit
+pendingTask.addEventListener("change", (event) => {
+  if (event.target.type === "checkbox") {
+    const li = event.target.parentNode;
+    moveToCompleted(li);
+  }
+});
+❌ কমপ্লিটেড টাস্কে 🗑️ বাটনে ক্লিক করলে টাস্ক ডিলিট হয়:
+js
+Copy
+Edit
+completedTask.addEventListener("click", (event) => {
+  if (event.target.id === "btn-del") {
+    const li = event.target.parentNode;
+    li.remove();
+  }
+});
+✏️ পেন্ডিং টাস্কে এডিট বাটনে ক্লিক করলে এডিট মোডে যায়:
+js
+Copy
+Edit
+pendingTask.addEventListener("click", (event) => {
+  if (event.target.classList.contains("edit")) {
+    const button = event.target;
+    const li = button.parentNode;
+    const p = li.querySelector("p");
+
+    if (p && li) {
+      inputField.value = p.textContent;
+      addTaskBtn.textContent = "Edit Task";
+      isEditing = true;
+      taskToEdit = li;
+    }
+  }
+});
+✏️ বাটনে ক্লিক করলে আগের টাস্কটা ইনপুটে বসে যায় এডিট করার জন্য।
+
+বাটনের টেক্সট "Edit Task" হয়।

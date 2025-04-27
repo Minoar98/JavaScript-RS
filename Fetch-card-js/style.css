@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Container */
+.container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Fetch Button */
+.fetch-button {
+  display: block;
+  margin: 0 auto 2rem;
+  padding: 0.7rem 1.5rem;
+  background: #ff69b4; /* Pink */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.fetch-button:hover {
+  background: #ff1493; /* Deeper pink (hot pink) */
+}
+/* Users Grid */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+  gap: 2rem;
+}
+
+/* User Card */
+.user-card {
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo */
+.photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #4caf50;
+}
+
+/* Info */
+.info p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
