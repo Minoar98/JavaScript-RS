@@ -7,25 +7,28 @@
 
 /* Body */
 body {
-  background-color: #f0f2f5;
+  background-color: #f0f2f519;
   color: #333;
   font-family: "Arial", sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 32px;
 }
-
+span {
+  color: #ff1493;
+}
 /* Container */
 .container {
   background-color: #ffffff;
   border: 1px solid #ddd;
-  padding: 2rem;
+  padding: 32px;
   border-radius: 20px;
   width: 100%;
   max-width: 1000px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /* Title */
@@ -38,25 +41,24 @@ body {
 /* Fetch Button */
 .fetch-button {
   display: block;
-  margin: 0 auto 2rem;
-  padding: 0.7rem 1.5rem;
-  background: #ff69b4; /* Pink */
+  margin: 0 auto 32px;
+  padding: 12px 24px;
+  background: #ff1493; /* Pink */
   color: white;
-  border: none;
-  border-radius: 12px;
+  border: 2px solid;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
   transition: background 0.3s;
 }
 
 .fetch-button:hover {
-  background: #ff1493; /* Deeper pink (hot pink) */
+  background: #ff69b4; /* Deeper pink (hot pink) */
 }
 /* Users Grid */
 .users-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
-  gap: 2rem;
+  gap: 32px;
 }
 
 /* User Card */
@@ -81,7 +83,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  border: 2px solid #4caf50;
+  border: 2px solid #ff1493;
 }
 
 /* Info */

@@ -1,12 +1,8 @@
-// let pending = localStorage.getItem("pending") || [];
-// console.log("pending", pending);
-// let complete = localStorage.getItem("complete") || [];
-// console.log("complete", complete);
-
-//local storage
+// Get tasks from localStorage
 let pending = JSON.parse(localStorage.getItem("pending")) || [];
 let complete = JSON.parse(localStorage.getItem("complete")) || [];
 
+// Select elements
 const inputField = document.getElementById("input");
 const addTaskBtn = document.getElementById("btn");
 const pendingTask = document.getElementById("pending-task");
@@ -15,7 +11,40 @@ const completedTask = document.getElementById("completed-task");
 let isEditing = false;
 let taskToEdit = null;
 
-// Add or Edit Task
+// Save current tasks to localStorage
+const saveToLocalStorage = () => {
+  const pendingTasks = [];
+  pendingTask.querySelectorAll("li").forEach((li) => {
+    console.log("Pending task: ==============", li);
+    const p = li.querySelector("p"); // if exist then 'p' otherwise 'undefined'
+    if (p) {
+      pendingTasks.push(p.textContent); // jdi p er value thake tahole korbo only otherwise not to do.
+    }
+  });
+
+  console.log("Pending tasks: ======*****========", pendingTasks);
+
+  const completedTasks = [];
+  completedTask.querySelectorAll("li").forEach((li) => {
+    console.log("Completed task: ==============", li);
+    const p = li.querySelector("p");
+    if (p) completedTasks.push(p.textContent);
+  });
+
+  console.log("Completed tasks: ======*****========", completedTasks);
+
+  // pendingTasks = ['Task 1', 'Task 2', 'Task 3'];
+  // JSON.stringify(['Task 1', 'Task 2', 'Task 3'])
+  // "['Task 1','Task 2','Task 3']"
+
+  // JSON.parse("['Task 1','Task 2','Task 3']")
+  // ['Task 1', 'Task 2', 'Task 3']
+
+  localStorage.setItem("pending", JSON.stringify(pendingTasks));
+  localStorage.setItem("complete", JSON.stringify(completedTasks));
+};
+
+// Add or Edit a Task
 const addOrEditTaskFn = () => {
   let taskText = inputField.value.trim();
 
@@ -25,64 +54,41 @@ const addOrEditTaskFn = () => {
   }
 
   if (taskText.length > 10) {
-    alert("😮 Task cannot be more than 10");
+    alert("😮 Task cannot be more than 10 characters");
     return;
   }
 
   if (isEditing) {
-    // Update the existing task
+    // Editing existing task
     const p = taskToEdit.querySelector("p");
     p.textContent = taskText;
     p.style.fontWeight = "bold";
 
-    // Reset the button and input field
     addTaskBtn.textContent = "Add Task";
-
-    // Clear the input field
     inputField.value = "";
     isEditing = false;
     taskToEdit = null;
   } else {
-    // Add a task in the pending list
-    // <li>
-    //   <input type="checkbox" />
-    //   <p>Task 1</p>
-    //   <button class="edit">✏️</button>
-    // </li>
-
-    // element create
+    // Adding new task
     const li = document.createElement("li");
     const input = document.createElement("input");
     const p = document.createElement("p");
     const button = document.createElement("button");
 
-    // add attribute in the respective element
     input.type = "checkbox";
-    // input.setAttribute("type","checkbox")
     p.innerHTML = taskText;
     button.className = "edit";
     button.innerHTML = "✏️";
 
-    li.appendChild(input); // <li><input /></li>
-    li.appendChild(p); //
-    li.appendChild(button); //
+    li.appendChild(input);
+    li.appendChild(p);
+    li.appendChild(button);
 
-    // console.log(li);
-    // console.dir(li);
-
-    // Alternatives
-    // Add a task in the pending list
-    // const li = document.createElement('li');
-    // li.innerHTML = `
-    //   <input type="checkbox" />
-    //   <p>${taskText}</p>
-    //   <button class="edit">✏️</button>
-    // `;
     pendingTask.appendChild(li);
-
-    // Clear the input field
     inputField.value = "";
   }
+
+  saveToLocalStorage();
 };
 
 // Move task to Completed Tasks
@@ -99,50 +105,79 @@ const moveToCompleted = (taskItem) => {
   completedTask.appendChild(li);
 
   taskItem.remove();
+  saveToLocalStorage();
 };
 
+// Event Listeners
 addTaskBtn.addEventListener("click", addOrEditTaskFn);
 
 // Event Delegation for Pending Tasks
 pendingTask.addEventListener("change", (event) => {
-  console.log("Something changed inside pendingTask");
   if (event.target.type === "checkbox") {
     const li = event.target.parentNode;
-    console.log("The parent <li> is:", li);
     moveToCompleted(li);
   }
 });
 
-// Event Delegation for Completed Tasks
+// Event Delegation for Completed Tasks (Delete)
 completedTask.addEventListener("click", (event) => {
-  console.log(" You clicked on:", event.target);
   if (event.target.id === "btn-del") {
-    console.log("Delete button clicked!");
     const li = event.target.parentNode;
-    console.log("Removing this task:", li);
-    li.remove(); // Directly remove the task
+    li.remove();
+    saveToLocalStorage();
   }
 });
 
-// Event Delegation for Edit Button Click
+// Event Delegation for Edit Button
 pendingTask.addEventListener("click", (event) => {
   if (event.target.classList.contains("edit")) {
-    // console.log(event);
-    // console.log(event.target);
-    // console.log(event.target.classList);
     const button = event.target;
     const li = button.parentNode;
     const p = li.querySelector("p");
 
     if (p && li) {
       inputField.value = p.textContent;
-
-      // Change the button text to "Edit Task"
       addTaskBtn.textContent = "Edit Task";
-
-      // Set editing state
       isEditing = true;
       taskToEdit = li;
     }
   }
 });
+
+// Load existing tasks when page loads
+const renderTasks = () => {
+  pending.forEach((taskText) => {
+    const li = document.createElement("li");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const button = document.createElement("button");
+
+    input.type = "checkbox";
+    p.innerHTML = taskText;
+    button.className = "edit";
+    button.innerHTML = "✏️";
+
+    li.appendChild(input);
+    li.appendChild(p);
+    li.appendChild(button);
+
+    pendingTask.appendChild(li);
+  });
+
+  complete.forEach((taskText) => {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    const button = document.createElement("button");
+
+    p.innerHTML = taskText;
+    button.id = "btn-del";
+    button.textContent = "🗑️";
+
+    li.appendChild(p);
+    li.appendChild(button);
+
+    completedTask.appendChild(li);
+  });
+};
+
+renderTasks();

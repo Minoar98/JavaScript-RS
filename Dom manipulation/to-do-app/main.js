@@ -1,111 +1,148 @@
-const newTask = document.getElementById("input");
-const addTask = document.getElementById("btn");
+// let pending = localStorage.getItem("pending") || [];
+// console.log("pending", pending);
+// let complete = localStorage.getItem("complete") || [];
+// console.log("complete", complete);
+
+//local storage
+let pending = JSON.parse(localStorage.getItem("pending")) || [];
+let complete = JSON.parse(localStorage.getItem("complete")) || [];
+
+const inputField = document.getElementById("input");
+const addTaskBtn = document.getElementById("btn");
 const pendingTask = document.getElementById("pending-task");
-const checkBox = document.getElementById("checkbox");
+const completedTask = document.getElementById("completed-task");
 
-// Add task
-const addTaskFn = () => {
-  // console.log("click korci");
-  let value = newTask.value;
+let isEditing = false;
+let taskToEdit = null;
 
-  if (value === "") {
+// Add or Edit Task
+const addOrEditTaskFn = () => {
+  let taskText = inputField.value.trim();
+
+  if (taskText === "") {
     alert("😮 Task cannot be empty");
     return;
   }
 
-  if (value.length > 10) {
+  if (taskText.length > 10) {
     alert("😮 Task cannot be more than 10");
     return;
   }
 
-  console.log(value);
+  if (isEditing) {
+    // Update the existing task
+    const p = taskToEdit.querySelector("p");
+    p.textContent = taskText;
+    p.style.fontWeight = "bold";
 
-  // Add a task in the pending list
-  // <li>
-  //   <input type="checkbox" />
-  //   <p>Task 1</p>
-  //   <button class="edit">✏️</button>
-  // </li>
+    // Reset the button and input field
+    addTaskBtn.textContent = "Add Task";
 
-  // element create
-  const li = document.createElement("li");
-  const input = document.createElement("input");
-  const p = document.createElement("p");
-  const button = document.createElement("button");
+    // Clear the input field
+    inputField.value = "";
+    isEditing = false;
+    taskToEdit = null;
+  } else {
+    // Add a task in the pending list
+    // <li>
+    //   <input type="checkbox" />
+    //   <p>Task 1</p>
+    //   <button class="edit">✏️</button>
+    // </li>
 
-  // add attribute in the respective element
-  input.type = "checkbox";
-  // input.setAttribute("type","checkbox")
-  p.innerHTML = value;
-  button.className = "edit";
-  button.innerHTML = "✏️";
+    // element create
+    const li = document.createElement("li");
+    const input = document.createElement("input");
+    const p = document.createElement("p");
+    const button = document.createElement("button");
 
-  li.appendChild(input); // <li><input /></li>
-  li.appendChild(p); //
-  li.appendChild(button); //
+    // add attribute in the respective element
+    input.type = "checkbox";
+    // input.setAttribute("type","checkbox")
+    p.innerHTML = taskText;
+    button.className = "edit";
+    button.innerHTML = "✏️";
 
-  console.log(li);
-  console.dir(li);
+    li.appendChild(input); // <li><input /></li>
+    li.appendChild(p); //
+    li.appendChild(button); //
 
-  pendingTask.appendChild(li);
+    // console.log(li);
+    // console.dir(li);
 
-  newTask.value = "";
+    // Alternatives
+    // Add a task in the pending list
+    // const li = document.createElement('li');
+    // li.innerHTML = `
+    //   <input type="checkbox" />
+    //   <p>${taskText}</p>
+    //   <button class="edit">✏️</button>
+    // `;
+    pendingTask.appendChild(li);
+
+    // Clear the input field
+    inputField.value = "";
+  }
 };
 
-//pending task
+// Move task to Completed Tasks
+const moveToCompleted = (taskItem) => {
+  const p = taskItem.querySelector("p");
 
-// const checkBoxFn = () => {
-//   console.log("ahhahjaja");
+  const li = document.createElement("li");
+  const button = document.createElement("button");
+  button.id = "btn-del";
+  button.textContent = "🗑️";
 
-//   console.log(checkBox.nextElementSibling.innerHTML);
-//   checkBox.parentNode.remove();
-// };
+  li.appendChild(p);
+  li.appendChild(button);
+  completedTask.appendChild(li);
 
-addTask.addEventListener("click", addTaskFn);
-// checkBox.addEventListener("change", checkBoxFn);
+  taskItem.remove();
+};
 
-// Delete All
-document.querySelectorAll("#btn-del").forEach((button) => {
-  button.addEventListener("click", () => {
-    let ctask = button.parentNode;
-    if (ctask) {
-      ctask.remove();
-    }
-  });
+addTaskBtn.addEventListener("click", addOrEditTaskFn);
+
+// Event Delegation for Pending Tasks
+pendingTask.addEventListener("change", (event) => {
+  console.log("Something changed inside pendingTask");
+  if (event.target.type === "checkbox") {
+    const li = event.target.parentNode;
+    console.log("The parent <li> is:", li);
+    moveToCompleted(li);
+  }
 });
 
-// For checkbox
-document.querySelectorAll(".edit").forEach((button) => {
-  button.addEventListener("click", () => {
-    let p = button.previousElementSibling;
-    if (p) {
-      console.log(p.innerHTML);
-      newTask.value = p.innerHTML;
+// Event Delegation for Completed Tasks
+completedTask.addEventListener("click", (event) => {
+  console.log(" You clicked on:", event.target);
+  if (event.target.id === "btn-del") {
+    console.log("Delete button clicked!");
+    const li = event.target.parentNode;
+    console.log("Removing this task:", li);
+    li.remove(); // Directly remove the task
+  }
+});
 
-      button = newTask.nextElementSibling;
-      console.log("button: ", button);
-      button.innerHTML = "Edit Task";
+// Event Delegation for Edit Button Click
+pendingTask.addEventListener("click", (event) => {
+  if (event.target.classList.contains("edit")) {
+    // console.log(event);
+    // console.log(event.target);
+    // console.log(event.target.classList);
+    const button = event.target;
+    const li = button.parentNode;
+    const p = li.querySelector("p");
 
-      button.addEventListener("click", (event) => {
-        console.log("newTask: ", newTask, newTask.value);
-        let value = newTask.value;
-        console.log("value: ", value);
-        console.log("value2: ", event.target.value);
+    if (p && li) {
+      inputField.value = p.textContent;
 
-        // if (value === "") {
-        //   alert("😮 Task cannot be empty");
-        //   return;
-        // }
+      // Change the button text to "Edit Task"
+      addTaskBtn.textContent = "Edit Task";
 
-        // if (value.length > 10) {
-        //   alert("😮 Task cannot be more than 10");
-        //   return;
-        // }
-
-        p.innerHTML = `${value} (edited)`;
-        button.innerHTML = "Add Task";
-        newTask.value = "";
-      });
+      // Set editing state
+      isEditing = true;
+      taskToEdit = li;
     }
-  });
+  }
 });

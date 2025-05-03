@@ -69,3 +69,4 @@ Promise.race([firstPromise, Promise1, Promise2])
     // console.log(error.message);
     console.log(error);
   });
+
