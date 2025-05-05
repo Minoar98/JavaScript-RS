@@ -34,9 +34,43 @@ Function
 6. tempelate literal (edit task r jnoo ar content task update er jnnoo lagbe)
 
 tips:
-1st tag gula ke dorce
-eventlistener  add button e lagabo
+1st tag gula ke dorbo
+eventlistener  add korte hbe
+function likbo 
+
+*** input field ta keno dorbo?
+ans : user je value input dibe  oitake dorte hbe .oi value ta ke  dorar jnno input tag ta ke dorte hbe.
+dorbo kivbe ?
+1. getElementById/querySelector
+*** button ta keno dorbo?
+ekta event add korar jnno. add  korbo click event.  keno? ami cai click korle kicu jno hoy.
+eigula korte gele jA Ja korte hbe 
+1.button ta ke dorte hbe
+2. button e ekta click event add korte hbe.
+3.click korle jno kicu kaj hoy tar jnno ekta function likte hbe
+
+kicu likte hbe
 
 
+Portfolio Layout Design | E-commerce Layout Design 
+Key Contributions:
 
+Designed clean and responsive portfolio layouts using modern web design principles.
+Created e-commerce page mockups, focusing on user experience and conversion optimization.
+Utilized tools like Figma, Adobe photoshop, and HTML/CSS to bring design concepts to life.
+Collaborated with senior designers to refine visual aesthetics and improve layout usability.
+
+
+BACHELOR OF BUSINESS ADMINISTRATION
+
+TEJGAON COLLEGE
+Major: Finance.
+CGPA-3.26
+2017-2023
+
+HIGHER SECONDARY SCHOOL CERTIFICATE
+2014-2016
+SECONDARY SCHOOL CERTIFICATE
+Palashbari S.M. Pilot High school,
+Group: Science, GPA-5.00(out of 5)
 

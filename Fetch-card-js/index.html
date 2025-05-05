@@ -9,10 +9,13 @@
   <body>
     <div class="container">
       <h1>All Users <span> Information</span></h1>
-      <button id ="btn"class="fetch-button">Fetch Users</button>
+      <div class="button-group">
+        <button id="btn" class="btn">Fetch Users</button>
+        <button id="clear-btn" class="btn">Clear</button>
+      </div>
 
-      <div class="users-grid">
-        <!-- Card 1 -->
+      <div class="users-grid" id="users-grid">
+        <!-- 
         <div class="user-card">
           <img src="./img/messi.jpg" alt="User Photo" class="photo" />
           <div class="info">
@@ -25,8 +28,6 @@
             <p><strong>Website:</strong> lionelmessi.com</p>
           </div>
         </div>
-
-        <!-- Card 2 -->
         <div class="user-card">
           <img src="./img/ronaldo.jpeg" alt="User Photo" class="photo" />
           <div class="info">
@@ -39,8 +40,6 @@
             <p><strong>Website:</strong> cr7.com</p>
           </div>
         </div>
-
-        <!-- Card 3 -->
 
         <div class="user-card">
           <img src="./img/confederacoes.jpg" alt="User Photo" class="photo" />
@@ -55,7 +54,6 @@
           </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="user-card">
           <img
             src="./img/robert-lewandowski-poland-bayern-trophy.jpg"
@@ -71,7 +69,7 @@
             <p><strong>Phone:</strong> (987) 654-3210</p>
             <p><strong>Website:</strong> robert-lewandowski.com</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <script src="./fetch.js"></script>
